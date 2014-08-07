@@ -1,0 +1,15 @@
+Analysis & Synthesis Status : Successful - Thu Aug 07 21:50:16 2014
+Quartus II Version : 11.0 Build 208 07/03/2011 SP 1 SJ Full Version
+Revision Name : fpganic
+Top-level Entity Name : fpganic
+Family : Stratix II
+Logic utilization : N/A
+    Combinational ALUTs : 2,404
+    Dedicated logic registers : 3,351
+Total registers : 3351
+Total pins : 190
+Total virtual pins : 0
+Total block memory bits : 436,320
+DSP block 9-bit elements : 0
+Total PLLs : 0
+Total DLLs : 0

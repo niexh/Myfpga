@@ -1,0 +1,173 @@
+
+State Machine - |fpganic|sys_ctrl:sys_ctrl_module|portx_status
+Name portx_status.portx_wait portx_status.portx_read portx_status.portx_write portx_status.portx_write_or_read portx_status.portx_5d portx_status.portx_4d portx_status.portx_3d portx_status.portx_2d portx_status.portx_1d portx_status.portx_idle 
+portx_status.portx_idle 0 0 0 0 0 0 0 0 0 0 
+portx_status.portx_1d 0 0 0 0 0 0 0 0 1 1 
+portx_status.portx_2d 0 0 0 0 0 0 0 1 0 1 
+portx_status.portx_3d 0 0 0 0 0 0 1 0 0 1 
+portx_status.portx_4d 0 0 0 0 0 1 0 0 0 1 
+portx_status.portx_5d 0 0 0 0 1 0 0 0 0 1 
+portx_status.portx_write_or_read 0 0 0 1 0 0 0 0 0 1 
+portx_status.portx_write 0 0 1 0 0 0 0 0 0 1 
+portx_status.portx_read 0 1 0 0 0 0 0 0 0 1 
+portx_status.portx_wait 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |fpganic|spi3_tx:\getx_interface:3:spi3tx_model|spi3_tx_gateway:spi3_tx_gateway_m|spi3tx_status
+Name spi3tx_status.spi3tx_data15 spi3tx_status.spi3tx_data14 spi3tx_status.spi3tx_data13 spi3tx_status.spi3tx_data12 spi3tx_status.spi3tx_data11 spi3tx_status.spi3tx_data10 spi3tx_status.spi3tx_data9 spi3tx_status.spi3tx_data8 spi3tx_status.spi3tx_data7 spi3tx_status.spi3tx_data6 spi3tx_status.spi3tx_data5 spi3tx_status.spi3tx_data4 spi3tx_status.spi3tx_data3 spi3tx_status.spi3tx_data2 spi3tx_status.spi3tx_data1 spi3tx_status.spi3tx_data0 spi3tx_status.spi3tx_sop 
+spi3tx_status.spi3tx_sop 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+spi3tx_status.spi3tx_data0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+spi3tx_status.spi3tx_data1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+spi3tx_status.spi3tx_data2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+spi3tx_status.spi3tx_data3 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+spi3tx_status.spi3tx_data4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+spi3tx_status.spi3tx_data5 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data6 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data7 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data8 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data9 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data10 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data11 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data12 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data13 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data14 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data15 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |fpganic|spi3_rx:\getx_interface:3:spi3rx_model|spi3rx_status
+Name spi3rx_status.spi3rx_data15 spi3rx_status.spi3rx_data14 spi3rx_status.spi3rx_data13 spi3rx_status.spi3rx_data12 spi3rx_status.spi3rx_data11 spi3rx_status.spi3rx_data10 spi3rx_status.spi3rx_data9 spi3rx_status.spi3rx_data8 spi3rx_status.spi3rx_data7 spi3rx_status.spi3rx_data6 spi3rx_status.spi3rx_data5 spi3rx_status.spi3rx_data4 spi3rx_status.spi3rx_data3 spi3rx_status.spi3rx_data2 spi3rx_status.spi3rx_data1 spi3rx_status.spi3rx_data0 spi3rx_status.spi3rx_sop 
+spi3rx_status.spi3rx_sop 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+spi3rx_status.spi3rx_data0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+spi3rx_status.spi3rx_data1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+spi3rx_status.spi3rx_data2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+spi3rx_status.spi3rx_data3 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+spi3rx_status.spi3rx_data4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+spi3rx_status.spi3rx_data5 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data6 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data7 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data8 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data9 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data10 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data11 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data12 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data13 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data14 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data15 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |fpganic|spi3_tx:\getx_interface:2:spi3tx_model|spi3_tx_gateway:spi3_tx_gateway_m|spi3tx_status
+Name spi3tx_status.spi3tx_data15 spi3tx_status.spi3tx_data14 spi3tx_status.spi3tx_data13 spi3tx_status.spi3tx_data12 spi3tx_status.spi3tx_data11 spi3tx_status.spi3tx_data10 spi3tx_status.spi3tx_data9 spi3tx_status.spi3tx_data8 spi3tx_status.spi3tx_data7 spi3tx_status.spi3tx_data6 spi3tx_status.spi3tx_data5 spi3tx_status.spi3tx_data4 spi3tx_status.spi3tx_data3 spi3tx_status.spi3tx_data2 spi3tx_status.spi3tx_data1 spi3tx_status.spi3tx_data0 spi3tx_status.spi3tx_sop 
+spi3tx_status.spi3tx_sop 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+spi3tx_status.spi3tx_data0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+spi3tx_status.spi3tx_data1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+spi3tx_status.spi3tx_data2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+spi3tx_status.spi3tx_data3 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+spi3tx_status.spi3tx_data4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+spi3tx_status.spi3tx_data5 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data6 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data7 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data8 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data9 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data10 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data11 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data12 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data13 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data14 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data15 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |fpganic|spi3_rx:\getx_interface:2:spi3rx_model|spi3rx_status
+Name spi3rx_status.spi3rx_data15 spi3rx_status.spi3rx_data14 spi3rx_status.spi3rx_data13 spi3rx_status.spi3rx_data12 spi3rx_status.spi3rx_data11 spi3rx_status.spi3rx_data10 spi3rx_status.spi3rx_data9 spi3rx_status.spi3rx_data8 spi3rx_status.spi3rx_data7 spi3rx_status.spi3rx_data6 spi3rx_status.spi3rx_data5 spi3rx_status.spi3rx_data4 spi3rx_status.spi3rx_data3 spi3rx_status.spi3rx_data2 spi3rx_status.spi3rx_data1 spi3rx_status.spi3rx_data0 spi3rx_status.spi3rx_sop 
+spi3rx_status.spi3rx_sop 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+spi3rx_status.spi3rx_data0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+spi3rx_status.spi3rx_data1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+spi3rx_status.spi3rx_data2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+spi3rx_status.spi3rx_data3 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+spi3rx_status.spi3rx_data4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+spi3rx_status.spi3rx_data5 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data6 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data7 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data8 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data9 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data10 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data11 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data12 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data13 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data14 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data15 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |fpganic|spi3_tx:\getx_interface:1:spi3tx_model|spi3_tx_gateway:spi3_tx_gateway_m|spi3tx_status
+Name spi3tx_status.spi3tx_data15 spi3tx_status.spi3tx_data14 spi3tx_status.spi3tx_data13 spi3tx_status.spi3tx_data12 spi3tx_status.spi3tx_data11 spi3tx_status.spi3tx_data10 spi3tx_status.spi3tx_data9 spi3tx_status.spi3tx_data8 spi3tx_status.spi3tx_data7 spi3tx_status.spi3tx_data6 spi3tx_status.spi3tx_data5 spi3tx_status.spi3tx_data4 spi3tx_status.spi3tx_data3 spi3tx_status.spi3tx_data2 spi3tx_status.spi3tx_data1 spi3tx_status.spi3tx_data0 spi3tx_status.spi3tx_sop 
+spi3tx_status.spi3tx_sop 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+spi3tx_status.spi3tx_data0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+spi3tx_status.spi3tx_data1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+spi3tx_status.spi3tx_data2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+spi3tx_status.spi3tx_data3 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+spi3tx_status.spi3tx_data4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+spi3tx_status.spi3tx_data5 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data6 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data7 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data8 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data9 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data10 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data11 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data12 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data13 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data14 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data15 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |fpganic|spi3_rx:\getx_interface:1:spi3rx_model|spi3rx_status
+Name spi3rx_status.spi3rx_data15 spi3rx_status.spi3rx_data14 spi3rx_status.spi3rx_data13 spi3rx_status.spi3rx_data12 spi3rx_status.spi3rx_data11 spi3rx_status.spi3rx_data10 spi3rx_status.spi3rx_data9 spi3rx_status.spi3rx_data8 spi3rx_status.spi3rx_data7 spi3rx_status.spi3rx_data6 spi3rx_status.spi3rx_data5 spi3rx_status.spi3rx_data4 spi3rx_status.spi3rx_data3 spi3rx_status.spi3rx_data2 spi3rx_status.spi3rx_data1 spi3rx_status.spi3rx_data0 spi3rx_status.spi3rx_sop 
+spi3rx_status.spi3rx_sop 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+spi3rx_status.spi3rx_data0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+spi3rx_status.spi3rx_data1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+spi3rx_status.spi3rx_data2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+spi3rx_status.spi3rx_data3 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+spi3rx_status.spi3rx_data4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+spi3rx_status.spi3rx_data5 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data6 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data7 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data8 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data9 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data10 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data11 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data12 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data13 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data14 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data15 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |fpganic|spi3_tx:\getx_interface:0:spi3tx_model|spi3_tx_gateway:spi3_tx_gateway_m|spi3tx_status
+Name spi3tx_status.spi3tx_data15 spi3tx_status.spi3tx_data14 spi3tx_status.spi3tx_data13 spi3tx_status.spi3tx_data12 spi3tx_status.spi3tx_data11 spi3tx_status.spi3tx_data10 spi3tx_status.spi3tx_data9 spi3tx_status.spi3tx_data8 spi3tx_status.spi3tx_data7 spi3tx_status.spi3tx_data6 spi3tx_status.spi3tx_data5 spi3tx_status.spi3tx_data4 spi3tx_status.spi3tx_data3 spi3tx_status.spi3tx_data2 spi3tx_status.spi3tx_data1 spi3tx_status.spi3tx_data0 spi3tx_status.spi3tx_sop 
+spi3tx_status.spi3tx_sop 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+spi3tx_status.spi3tx_data0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+spi3tx_status.spi3tx_data1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+spi3tx_status.spi3tx_data2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+spi3tx_status.spi3tx_data3 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+spi3tx_status.spi3tx_data4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+spi3tx_status.spi3tx_data5 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data6 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data7 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data8 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data9 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data10 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data11 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data12 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data13 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data14 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3tx_status.spi3tx_data15 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |fpganic|spi3_rx:\getx_interface:0:spi3rx_model|spi3rx_status
+Name spi3rx_status.spi3rx_data15 spi3rx_status.spi3rx_data14 spi3rx_status.spi3rx_data13 spi3rx_status.spi3rx_data12 spi3rx_status.spi3rx_data11 spi3rx_status.spi3rx_data10 spi3rx_status.spi3rx_data9 spi3rx_status.spi3rx_data8 spi3rx_status.spi3rx_data7 spi3rx_status.spi3rx_data6 spi3rx_status.spi3rx_data5 spi3rx_status.spi3rx_data4 spi3rx_status.spi3rx_data3 spi3rx_status.spi3rx_data2 spi3rx_status.spi3rx_data1 spi3rx_status.spi3rx_data0 spi3rx_status.spi3rx_sop 
+spi3rx_status.spi3rx_sop 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+spi3rx_status.spi3rx_data0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+spi3rx_status.spi3rx_data1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+spi3rx_status.spi3rx_data2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+spi3rx_status.spi3rx_data3 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+spi3rx_status.spi3rx_data4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+spi3rx_status.spi3rx_data5 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data6 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data7 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data8 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data9 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data10 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data11 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data12 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data13 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data14 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+spi3rx_status.spi3rx_data15 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,2279 @@
+TimeQuest Timing Analyzer report for fpganic
+Thu Aug 07 21:51:06 2014
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Setup Times
+ 12. Hold Times
+ 13. Clock to Output Times
+ 14. Minimum Clock to Output Times
+ 15. Propagation Delay
+ 16. Minimum Propagation Delay
+ 17. Output Enable Times
+ 18. Minimum Output Enable Times
+ 19. Output Disable Times
+ 20. Minimum Output Disable Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Propagation Delay
+ 31. Minimum Propagation Delay
+ 32. Output Enable Times
+ 33. Minimum Output Enable Times
+ 34. Output Disable Times
+ 35. Minimum Output Disable Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Progagation Delay
+ 42. Minimum Progagation Delay
+ 43. Setup Transfers
+ 44. Hold Transfers
+ 45. Recovery Transfers
+ 46. Removal Transfers
+ 47. Report TCCS
+ 48. Report RSKM
+ 49. Unconstrained Paths
+ 50. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                     ;
++--------------------+------------------------------------------------------------------+
+; Quartus II Version ; Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version ;
+; Revision Name      ; fpganic                                                          ;
+; Device Family      ; Stratix II                                                       ;
+; Device Name        ; EP2S60F1020C5                                                    ;
+; Timing Models      ; Final                                                            ;
+; Delay Model        ; Combined                                                         ;
+; Rise/Fall Delays   ; Unavailable                                                      ;
++--------------------+------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                   ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; Clock Name  ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets         ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; PTM1_CLK125 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { PTM1_CLK125 } ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+
+
++---------------------------------------------------+
+; Slow Model Fmax Summary                           ;
++------------+-----------------+-------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name  ; Note ;
++------------+-----------------+-------------+------+
+; 140.11 MHz ; 140.11 MHz      ; PTM1_CLK125 ;      ;
++------------+-----------------+-------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------+
+; Slow Model Setup Summary             ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; PTM1_CLK125 ; -6.137 ; -35595.803    ;
++-------------+--------+---------------+
+
+
++-------------------------------------+
+; Slow Model Hold Summary             ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; PTM1_CLK125 ; 0.457 ; 0.000         ;
++-------------+-------+---------------+
+
+
++--------------------------------------+
+; Slow Model Recovery Summary          ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; PTM1_CLK125 ; -4.152 ; -9022.296     ;
++-------------+--------+---------------+
+
+
++-------------------------------------+
+; Slow Model Removal Summary          ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; PTM1_CLK125 ; 4.831 ; 0.000         ;
++-------------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------------+--------+-----------------+
+; Clock       ; Slack  ; End Point TNS   ;
++-------------+--------+-----------------+
+; PTM1_CLK125 ; -1.500 ; -16140.040      ;
++-------------+--------+-----------------+
+
+
++------------------------------------------------------------------------------------+
+; Setup Times                                                                        ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; Data Port           ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; CPU_PORTX_A[*]      ; PTM1_CLK125 ; 13.733 ; 13.733 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[0]     ; PTM1_CLK125 ; 13.163 ; 13.163 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[1]     ; PTM1_CLK125 ; 13.733 ; 13.733 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[2]     ; PTM1_CLK125 ; 12.498 ; 12.498 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[3]     ; PTM1_CLK125 ; 12.514 ; 12.514 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[4]     ; PTM1_CLK125 ; 13.340 ; 13.340 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[5]     ; PTM1_CLK125 ; 12.105 ; 12.105 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[6]     ; PTM1_CLK125 ; 13.527 ; 13.527 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[7]     ; PTM1_CLK125 ; 13.187 ; 13.187 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[8]     ; PTM1_CLK125 ; 13.296 ; 13.296 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[9]     ; PTM1_CLK125 ; 13.351 ; 13.351 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[10]    ; PTM1_CLK125 ; 13.542 ; 13.542 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[11]    ; PTM1_CLK125 ; 12.007 ; 12.007 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[12]    ; PTM1_CLK125 ; 12.586 ; 12.586 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[13]    ; PTM1_CLK125 ; 12.809 ; 12.809 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[14]    ; PTM1_CLK125 ; 12.670 ; 12.670 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[15]    ; PTM1_CLK125 ; 12.305 ; 12.305 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[16]    ; PTM1_CLK125 ; 12.349 ; 12.349 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[17]    ; PTM1_CLK125 ; 12.905 ; 12.905 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[18]    ; PTM1_CLK125 ; 12.289 ; 12.289 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[19]    ; PTM1_CLK125 ; 12.308 ; 12.308 ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_DAT[*]    ; PTM1_CLK125 ; 6.395  ; 6.395  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]   ; PTM1_CLK125 ; 4.594  ; 4.594  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]   ; PTM1_CLK125 ; 4.243  ; 4.243  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]   ; PTM1_CLK125 ; 4.759  ; 4.759  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]   ; PTM1_CLK125 ; 4.354  ; 4.354  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]   ; PTM1_CLK125 ; 4.564  ; 4.564  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]   ; PTM1_CLK125 ; 4.486  ; 4.486  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]   ; PTM1_CLK125 ; 4.966  ; 4.966  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]   ; PTM1_CLK125 ; 4.692  ; 4.692  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]   ; PTM1_CLK125 ; 5.762  ; 5.762  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]   ; PTM1_CLK125 ; 5.573  ; 5.573  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10]  ; PTM1_CLK125 ; 5.228  ; 5.228  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11]  ; PTM1_CLK125 ; 6.395  ; 6.395  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12]  ; PTM1_CLK125 ; 5.279  ; 5.279  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13]  ; PTM1_CLK125 ; 6.016  ; 6.016  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14]  ; PTM1_CLK125 ; 5.600  ; 5.600  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15]  ; PTM1_CLK125 ; 5.370  ; 5.370  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16]  ; PTM1_CLK125 ; 5.737  ; 5.737  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17]  ; PTM1_CLK125 ; 4.934  ; 4.934  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18]  ; PTM1_CLK125 ; 6.023  ; 6.023  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19]  ; PTM1_CLK125 ; 5.365  ; 5.365  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20]  ; PTM1_CLK125 ; 5.726  ; 5.726  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21]  ; PTM1_CLK125 ; 5.245  ; 5.245  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22]  ; PTM1_CLK125 ; 5.278  ; 5.278  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23]  ; PTM1_CLK125 ; 5.526  ; 5.526  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24]  ; PTM1_CLK125 ; 4.981  ; 4.981  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25]  ; PTM1_CLK125 ; 5.408  ; 5.408  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26]  ; PTM1_CLK125 ; 5.650  ; 5.650  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27]  ; PTM1_CLK125 ; 4.912  ; 4.912  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28]  ; PTM1_CLK125 ; 5.669  ; 5.669  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29]  ; PTM1_CLK125 ; 4.942  ; 4.942  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30]  ; PTM1_CLK125 ; 5.491  ; 5.491  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31]  ; PTM1_CLK125 ; 5.049  ; 5.049  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32]  ; PTM1_CLK125 ; 5.022  ; 5.022  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33]  ; PTM1_CLK125 ; 4.524  ; 4.524  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34]  ; PTM1_CLK125 ; 4.938  ; 4.938  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35]  ; PTM1_CLK125 ; 5.225  ; 5.225  ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_OE        ; PTM1_CLK125 ; 4.822  ; 4.822  ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_WE        ; PTM1_CLK125 ; 5.167  ; 5.167  ; Rise       ; PTM1_CLK125     ;
+; CPU_PTM1_CS         ; PTM1_CLK125 ; 7.350  ; 7.350  ; Rise       ; PTM1_CLK125     ;
+; HRESET              ; PTM1_CLK125 ; 11.138 ; 11.138 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RDAT[*]   ; PTM1_CLK125 ; 6.305  ; 6.305  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[0]  ; PTM1_CLK125 ; 6.164  ; 6.164  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[1]  ; PTM1_CLK125 ; 6.230  ; 6.230  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[2]  ; PTM1_CLK125 ; 6.074  ; 6.074  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[3]  ; PTM1_CLK125 ; 6.099  ; 6.099  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[4]  ; PTM1_CLK125 ; 6.275  ; 6.275  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[5]  ; PTM1_CLK125 ; 6.305  ; 6.305  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[6]  ; PTM1_CLK125 ; 6.231  ; 6.231  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[7]  ; PTM1_CLK125 ; 6.218  ; 6.218  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[8]  ; PTM1_CLK125 ; 4.886  ; 4.886  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[9]  ; PTM1_CLK125 ; 4.578  ; 4.578  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[10] ; PTM1_CLK125 ; 4.644  ; 4.644  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[11] ; PTM1_CLK125 ; 4.418  ; 4.418  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[12] ; PTM1_CLK125 ; 4.734  ; 4.734  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[13] ; PTM1_CLK125 ; 4.746  ; 4.746  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[14] ; PTM1_CLK125 ; 4.600  ; 4.600  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[15] ; PTM1_CLK125 ; 4.655  ; 4.655  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[16] ; PTM1_CLK125 ; 6.037  ; 6.037  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[17] ; PTM1_CLK125 ; 5.826  ; 5.826  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[18] ; PTM1_CLK125 ; 5.255  ; 5.255  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[19] ; PTM1_CLK125 ; 5.626  ; 5.626  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[20] ; PTM1_CLK125 ; 5.323  ; 5.323  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[21] ; PTM1_CLK125 ; 5.245  ; 5.245  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[22] ; PTM1_CLK125 ; 4.928  ; 4.928  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[23] ; PTM1_CLK125 ; 5.293  ; 5.293  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[24] ; PTM1_CLK125 ; 5.884  ; 5.884  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[25] ; PTM1_CLK125 ; 5.771  ; 5.771  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[26] ; PTM1_CLK125 ; 5.046  ; 5.046  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[27] ; PTM1_CLK125 ; 5.397  ; 5.397  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[28] ; PTM1_CLK125 ; 5.915  ; 5.915  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[29] ; PTM1_CLK125 ; 5.419  ; 5.419  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[30] ; PTM1_CLK125 ; 5.340  ; 5.340  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[31] ; PTM1_CLK125 ; 5.761  ; 5.761  ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_REOP[*]   ; PTM1_CLK125 ; 10.053 ; 10.053 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[0]  ; PTM1_CLK125 ; 10.053 ; 10.053 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[1]  ; PTM1_CLK125 ; 7.731  ; 7.731  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[2]  ; PTM1_CLK125 ; 8.676  ; 8.676  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[3]  ; PTM1_CLK125 ; 8.805  ; 8.805  ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RERR[*]   ; PTM1_CLK125 ; 4.678  ; 4.678  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[0]  ; PTM1_CLK125 ; 4.678  ; 4.678  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[1]  ; PTM1_CLK125 ; 3.073  ; 3.073  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[2]  ; PTM1_CLK125 ; 4.149  ; 4.149  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[3]  ; PTM1_CLK125 ; 3.830  ; 3.830  ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RSOP[*]   ; PTM1_CLK125 ; 6.788  ; 6.788  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[0]  ; PTM1_CLK125 ; 6.788  ; 6.788  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[1]  ; PTM1_CLK125 ; 4.732  ; 4.732  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[2]  ; PTM1_CLK125 ; 6.302  ; 6.302  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[3]  ; PTM1_CLK125 ; 5.583  ; 5.583  ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RVAL[*]   ; PTM1_CLK125 ; 7.540  ; 7.540  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[0]  ; PTM1_CLK125 ; 7.540  ; 7.540  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[1]  ; PTM1_CLK125 ; 6.163  ; 6.163  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[2]  ; PTM1_CLK125 ; 6.489  ; 6.489  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[3]  ; PTM1_CLK125 ; 6.450  ; 6.450  ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_DTPA[*]   ; PTM1_CLK125 ; 5.545  ; 5.545  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[0]  ; PTM1_CLK125 ; 5.545  ; 5.545  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[1]  ; PTM1_CLK125 ; 5.106  ; 5.106  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[2]  ; PTM1_CLK125 ; 4.522  ; 4.522  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[3]  ; PTM1_CLK125 ; 4.758  ; 4.758  ; Rise       ; PTM1_CLK125     ;
+; SRESET              ; PTM1_CLK125 ; 9.021  ; 9.021  ; Rise       ; PTM1_CLK125     ;
++---------------------+-------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------+
+; Hold Times                                                                         ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; Data Port           ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; CPU_PORTX_A[*]      ; PTM1_CLK125 ; -4.859 ; -4.859 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[0]     ; PTM1_CLK125 ; -4.864 ; -4.864 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[1]     ; PTM1_CLK125 ; -5.143 ; -5.143 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[2]     ; PTM1_CLK125 ; -5.039 ; -5.039 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[3]     ; PTM1_CLK125 ; -5.382 ; -5.382 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[4]     ; PTM1_CLK125 ; -6.616 ; -6.616 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[5]     ; PTM1_CLK125 ; -4.859 ; -4.859 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[6]     ; PTM1_CLK125 ; -6.803 ; -6.803 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[7]     ; PTM1_CLK125 ; -6.463 ; -6.463 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[8]     ; PTM1_CLK125 ; -6.572 ; -6.572 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[9]     ; PTM1_CLK125 ; -6.627 ; -6.627 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[10]    ; PTM1_CLK125 ; -6.818 ; -6.818 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[11]    ; PTM1_CLK125 ; -5.026 ; -5.026 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[12]    ; PTM1_CLK125 ; -5.605 ; -5.605 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[13]    ; PTM1_CLK125 ; -5.828 ; -5.828 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[14]    ; PTM1_CLK125 ; -5.689 ; -5.689 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[15]    ; PTM1_CLK125 ; -5.324 ; -5.324 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[16]    ; PTM1_CLK125 ; -5.368 ; -5.368 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[17]    ; PTM1_CLK125 ; -5.776 ; -5.776 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[18]    ; PTM1_CLK125 ; -5.160 ; -5.160 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[19]    ; PTM1_CLK125 ; -5.179 ; -5.179 ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_DAT[*]    ; PTM1_CLK125 ; -2.932 ; -2.932 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]   ; PTM1_CLK125 ; -3.181 ; -3.181 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]   ; PTM1_CLK125 ; -2.932 ; -2.932 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]   ; PTM1_CLK125 ; -3.462 ; -3.462 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]   ; PTM1_CLK125 ; -3.046 ; -3.046 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]   ; PTM1_CLK125 ; -3.469 ; -3.469 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]   ; PTM1_CLK125 ; -3.327 ; -3.327 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]   ; PTM1_CLK125 ; -3.247 ; -3.247 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]   ; PTM1_CLK125 ; -3.375 ; -3.375 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]   ; PTM1_CLK125 ; -3.679 ; -3.679 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]   ; PTM1_CLK125 ; -3.249 ; -3.249 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10]  ; PTM1_CLK125 ; -3.647 ; -3.647 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11]  ; PTM1_CLK125 ; -3.797 ; -3.797 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12]  ; PTM1_CLK125 ; -4.048 ; -4.048 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13]  ; PTM1_CLK125 ; -3.837 ; -3.837 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14]  ; PTM1_CLK125 ; -3.768 ; -3.768 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15]  ; PTM1_CLK125 ; -3.748 ; -3.748 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16]  ; PTM1_CLK125 ; -3.695 ; -3.695 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17]  ; PTM1_CLK125 ; -3.935 ; -3.935 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18]  ; PTM1_CLK125 ; -4.134 ; -4.134 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19]  ; PTM1_CLK125 ; -3.958 ; -3.958 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20]  ; PTM1_CLK125 ; -3.978 ; -3.978 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21]  ; PTM1_CLK125 ; -3.995 ; -3.995 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22]  ; PTM1_CLK125 ; -3.796 ; -3.796 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23]  ; PTM1_CLK125 ; -3.666 ; -3.666 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24]  ; PTM1_CLK125 ; -4.085 ; -4.085 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25]  ; PTM1_CLK125 ; -3.596 ; -3.596 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26]  ; PTM1_CLK125 ; -4.155 ; -4.155 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27]  ; PTM1_CLK125 ; -3.778 ; -3.778 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28]  ; PTM1_CLK125 ; -3.762 ; -3.762 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29]  ; PTM1_CLK125 ; -3.455 ; -3.455 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30]  ; PTM1_CLK125 ; -3.893 ; -3.893 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31]  ; PTM1_CLK125 ; -3.709 ; -3.709 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32]  ; PTM1_CLK125 ; -4.081 ; -4.081 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33]  ; PTM1_CLK125 ; -3.908 ; -3.908 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34]  ; PTM1_CLK125 ; -4.377 ; -4.377 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35]  ; PTM1_CLK125 ; -4.076 ; -4.076 ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_OE        ; PTM1_CLK125 ; -4.041 ; -4.041 ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_WE        ; PTM1_CLK125 ; -4.838 ; -4.838 ; Rise       ; PTM1_CLK125     ;
+; CPU_PTM1_CS         ; PTM1_CLK125 ; -4.344 ; -4.344 ; Rise       ; PTM1_CLK125     ;
+; HRESET              ; PTM1_CLK125 ; -3.065 ; -3.065 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RDAT[*]   ; PTM1_CLK125 ; -2.692 ; -2.692 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[0]  ; PTM1_CLK125 ; -4.455 ; -4.455 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[1]  ; PTM1_CLK125 ; -3.952 ; -3.952 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[2]  ; PTM1_CLK125 ; -4.430 ; -4.430 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[3]  ; PTM1_CLK125 ; -4.225 ; -4.225 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[4]  ; PTM1_CLK125 ; -4.222 ; -4.222 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[5]  ; PTM1_CLK125 ; -4.647 ; -4.647 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[6]  ; PTM1_CLK125 ; -4.920 ; -4.920 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[7]  ; PTM1_CLK125 ; -4.828 ; -4.828 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[8]  ; PTM1_CLK125 ; -3.627 ; -3.627 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[9]  ; PTM1_CLK125 ; -3.464 ; -3.464 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[10] ; PTM1_CLK125 ; -3.475 ; -3.475 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[11] ; PTM1_CLK125 ; -2.801 ; -2.801 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[12] ; PTM1_CLK125 ; -3.334 ; -3.334 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[13] ; PTM1_CLK125 ; -3.351 ; -3.351 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[14] ; PTM1_CLK125 ; -3.339 ; -3.339 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[15] ; PTM1_CLK125 ; -2.692 ; -2.692 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[16] ; PTM1_CLK125 ; -4.224 ; -4.224 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[17] ; PTM1_CLK125 ; -4.087 ; -4.087 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[18] ; PTM1_CLK125 ; -4.204 ; -4.204 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[19] ; PTM1_CLK125 ; -4.242 ; -4.242 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[20] ; PTM1_CLK125 ; -4.072 ; -4.072 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[21] ; PTM1_CLK125 ; -4.093 ; -4.093 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[22] ; PTM1_CLK125 ; -4.082 ; -4.082 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[23] ; PTM1_CLK125 ; -3.803 ; -3.803 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[24] ; PTM1_CLK125 ; -3.544 ; -3.544 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[25] ; PTM1_CLK125 ; -3.414 ; -3.414 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[26] ; PTM1_CLK125 ; -3.487 ; -3.487 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[27] ; PTM1_CLK125 ; -3.653 ; -3.653 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[28] ; PTM1_CLK125 ; -4.027 ; -4.027 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[29] ; PTM1_CLK125 ; -4.013 ; -4.013 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[30] ; PTM1_CLK125 ; -3.536 ; -3.536 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[31] ; PTM1_CLK125 ; -3.963 ; -3.963 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_REOP[*]   ; PTM1_CLK125 ; -3.006 ; -3.006 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[0]  ; PTM1_CLK125 ; -4.204 ; -4.204 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[1]  ; PTM1_CLK125 ; -3.006 ; -3.006 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[2]  ; PTM1_CLK125 ; -4.149 ; -4.149 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[3]  ; PTM1_CLK125 ; -3.708 ; -3.708 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RERR[*]   ; PTM1_CLK125 ; -2.752 ; -2.752 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[0]  ; PTM1_CLK125 ; -4.357 ; -4.357 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[1]  ; PTM1_CLK125 ; -2.752 ; -2.752 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[2]  ; PTM1_CLK125 ; -3.828 ; -3.828 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[3]  ; PTM1_CLK125 ; -3.509 ; -3.509 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RSOP[*]   ; PTM1_CLK125 ; -2.994 ; -2.994 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[0]  ; PTM1_CLK125 ; -4.428 ; -4.428 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[1]  ; PTM1_CLK125 ; -2.994 ; -2.994 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[2]  ; PTM1_CLK125 ; -3.923 ; -3.923 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[3]  ; PTM1_CLK125 ; -3.745 ; -3.745 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RVAL[*]   ; PTM1_CLK125 ; -3.017 ; -3.017 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[0]  ; PTM1_CLK125 ; -4.017 ; -4.017 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[1]  ; PTM1_CLK125 ; -3.111 ; -3.111 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[2]  ; PTM1_CLK125 ; -3.190 ; -3.190 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[3]  ; PTM1_CLK125 ; -3.017 ; -3.017 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_DTPA[*]   ; PTM1_CLK125 ; -4.201 ; -4.201 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[0]  ; PTM1_CLK125 ; -5.224 ; -5.224 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[1]  ; PTM1_CLK125 ; -4.785 ; -4.785 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[2]  ; PTM1_CLK125 ; -4.201 ; -4.201 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[3]  ; PTM1_CLK125 ; -4.437 ; -4.437 ; Rise       ; PTM1_CLK125     ;
+; SRESET              ; PTM1_CLK125 ; -3.431 ; -3.431 ; Rise       ; PTM1_CLK125     ;
++---------------------+-------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------+
+; Clock to Output Times                                                              ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; Data Port           ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; CPU_PORTX_DAT[*]    ; PTM1_CLK125 ; 11.033 ; 11.033 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]   ; PTM1_CLK125 ; 8.928  ; 8.928  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]   ; PTM1_CLK125 ; 8.837  ; 8.837  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]   ; PTM1_CLK125 ; 9.135  ; 9.135  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]   ; PTM1_CLK125 ; 9.214  ; 9.214  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]   ; PTM1_CLK125 ; 9.274  ; 9.274  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]   ; PTM1_CLK125 ; 9.724  ; 9.724  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]   ; PTM1_CLK125 ; 9.708  ; 9.708  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]   ; PTM1_CLK125 ; 8.843  ; 8.843  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]   ; PTM1_CLK125 ; 8.166  ; 8.166  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]   ; PTM1_CLK125 ; 8.894  ; 8.894  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10]  ; PTM1_CLK125 ; 9.453  ; 9.453  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11]  ; PTM1_CLK125 ; 9.712  ; 9.712  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12]  ; PTM1_CLK125 ; 9.944  ; 9.944  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13]  ; PTM1_CLK125 ; 9.724  ; 9.724  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14]  ; PTM1_CLK125 ; 9.323  ; 9.323  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15]  ; PTM1_CLK125 ; 9.563  ; 9.563  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16]  ; PTM1_CLK125 ; 10.043 ; 10.043 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17]  ; PTM1_CLK125 ; 10.043 ; 10.043 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18]  ; PTM1_CLK125 ; 9.633  ; 9.633  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19]  ; PTM1_CLK125 ; 10.451 ; 10.451 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20]  ; PTM1_CLK125 ; 10.094 ; 10.094 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21]  ; PTM1_CLK125 ; 10.146 ; 10.146 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22]  ; PTM1_CLK125 ; 9.951  ; 9.951  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23]  ; PTM1_CLK125 ; 10.354 ; 10.354 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24]  ; PTM1_CLK125 ; 10.143 ; 10.143 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25]  ; PTM1_CLK125 ; 10.096 ; 10.096 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26]  ; PTM1_CLK125 ; 10.256 ; 10.256 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27]  ; PTM1_CLK125 ; 10.483 ; 10.483 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28]  ; PTM1_CLK125 ; 9.858  ; 9.858  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29]  ; PTM1_CLK125 ; 10.953 ; 10.953 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30]  ; PTM1_CLK125 ; 10.458 ; 10.458 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31]  ; PTM1_CLK125 ; 10.626 ; 10.626 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32]  ; PTM1_CLK125 ; 9.937  ; 9.937  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33]  ; PTM1_CLK125 ; 10.773 ; 10.773 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34]  ; PTM1_CLK125 ; 10.833 ; 10.833 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35]  ; PTM1_CLK125 ; 11.033 ; 11.033 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RFCLK     ; PTM1_CLK125 ; 10.580 ; 10.580 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RST       ; PTM1_CLK125 ; 11.072 ; 11.072 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TDAT[*]   ; PTM1_CLK125 ; 13.696 ; 13.696 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[0]  ; PTM1_CLK125 ; 11.211 ; 11.211 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[1]  ; PTM1_CLK125 ; 12.884 ; 12.884 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[2]  ; PTM1_CLK125 ; 13.158 ; 13.158 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[3]  ; PTM1_CLK125 ; 12.542 ; 12.542 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[4]  ; PTM1_CLK125 ; 13.696 ; 13.696 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[5]  ; PTM1_CLK125 ; 11.866 ; 11.866 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[6]  ; PTM1_CLK125 ; 12.894 ; 12.894 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[7]  ; PTM1_CLK125 ; 12.267 ; 12.267 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[8]  ; PTM1_CLK125 ; 12.722 ; 12.722 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[9]  ; PTM1_CLK125 ; 12.602 ; 12.602 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[10] ; PTM1_CLK125 ; 10.632 ; 10.632 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[11] ; PTM1_CLK125 ; 11.191 ; 11.191 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[12] ; PTM1_CLK125 ; 10.544 ; 10.544 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[13] ; PTM1_CLK125 ; 10.251 ; 10.251 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[14] ; PTM1_CLK125 ; 9.839  ; 9.839  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[15] ; PTM1_CLK125 ; 12.899 ; 12.899 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[16] ; PTM1_CLK125 ; 9.708  ; 9.708  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[17] ; PTM1_CLK125 ; 9.733  ; 9.733  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[18] ; PTM1_CLK125 ; 8.534  ; 8.534  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[19] ; PTM1_CLK125 ; 8.823  ; 8.823  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[20] ; PTM1_CLK125 ; 9.405  ; 9.405  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[21] ; PTM1_CLK125 ; 9.698  ; 9.698  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[22] ; PTM1_CLK125 ; 9.240  ; 9.240  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[23] ; PTM1_CLK125 ; 9.442  ; 9.442  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[24] ; PTM1_CLK125 ; 10.174 ; 10.174 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[25] ; PTM1_CLK125 ; 9.779  ; 9.779  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[26] ; PTM1_CLK125 ; 9.878  ; 9.878  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[27] ; PTM1_CLK125 ; 10.104 ; 10.104 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[28] ; PTM1_CLK125 ; 10.103 ; 10.103 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[29] ; PTM1_CLK125 ; 9.926  ; 9.926  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[30] ; PTM1_CLK125 ; 10.209 ; 10.209 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[31] ; PTM1_CLK125 ; 9.404  ; 9.404  ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TENB[*]   ; PTM1_CLK125 ; 11.055 ; 11.055 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[0]  ; PTM1_CLK125 ; 10.830 ; 10.830 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[1]  ; PTM1_CLK125 ; 10.773 ; 10.773 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[2]  ; PTM1_CLK125 ; 8.476  ; 8.476  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[3]  ; PTM1_CLK125 ; 11.055 ; 11.055 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TEOP[*]   ; PTM1_CLK125 ; 11.277 ; 11.277 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[0]  ; PTM1_CLK125 ; 11.277 ; 11.277 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[1]  ; PTM1_CLK125 ; 10.434 ; 10.434 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[2]  ; PTM1_CLK125 ; 9.100  ; 9.100  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[3]  ; PTM1_CLK125 ; 10.296 ; 10.296 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TERR[*]   ; PTM1_CLK125 ; 11.984 ; 11.984 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[0]  ; PTM1_CLK125 ; 11.332 ; 11.332 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[1]  ; PTM1_CLK125 ; 11.984 ; 11.984 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[2]  ; PTM1_CLK125 ; 9.684  ; 9.684  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[3]  ; PTM1_CLK125 ; 10.318 ; 10.318 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TFCLK     ; PTM1_CLK125 ; 5.894  ; 5.894  ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TSOP[*]   ; PTM1_CLK125 ; 13.670 ; 13.670 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[0]  ; PTM1_CLK125 ; 13.670 ; 13.670 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[1]  ; PTM1_CLK125 ; 12.603 ; 12.603 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[2]  ; PTM1_CLK125 ; 9.397  ; 9.397  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[3]  ; PTM1_CLK125 ; 9.666  ; 9.666  ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RFCLK     ; PTM1_CLK125 ; 10.580 ; 10.580 ; Fall       ; PTM1_CLK125     ;
+; PTM1_MAC1_TFCLK     ; PTM1_CLK125 ; 5.894  ; 5.894  ; Fall       ; PTM1_CLK125     ;
++---------------------+-------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                      ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; Data Port           ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; CPU_PORTX_DAT[*]    ; PTM1_CLK125 ; 8.166  ; 8.166  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]   ; PTM1_CLK125 ; 8.928  ; 8.928  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]   ; PTM1_CLK125 ; 8.837  ; 8.837  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]   ; PTM1_CLK125 ; 9.135  ; 9.135  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]   ; PTM1_CLK125 ; 9.214  ; 9.214  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]   ; PTM1_CLK125 ; 9.274  ; 9.274  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]   ; PTM1_CLK125 ; 9.724  ; 9.724  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]   ; PTM1_CLK125 ; 9.708  ; 9.708  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]   ; PTM1_CLK125 ; 8.843  ; 8.843  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]   ; PTM1_CLK125 ; 8.166  ; 8.166  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]   ; PTM1_CLK125 ; 8.894  ; 8.894  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10]  ; PTM1_CLK125 ; 9.453  ; 9.453  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11]  ; PTM1_CLK125 ; 9.712  ; 9.712  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12]  ; PTM1_CLK125 ; 9.944  ; 9.944  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13]  ; PTM1_CLK125 ; 9.724  ; 9.724  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14]  ; PTM1_CLK125 ; 9.323  ; 9.323  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15]  ; PTM1_CLK125 ; 9.563  ; 9.563  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16]  ; PTM1_CLK125 ; 10.043 ; 10.043 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17]  ; PTM1_CLK125 ; 10.043 ; 10.043 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18]  ; PTM1_CLK125 ; 9.633  ; 9.633  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19]  ; PTM1_CLK125 ; 10.451 ; 10.451 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20]  ; PTM1_CLK125 ; 10.094 ; 10.094 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21]  ; PTM1_CLK125 ; 10.146 ; 10.146 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22]  ; PTM1_CLK125 ; 9.951  ; 9.951  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23]  ; PTM1_CLK125 ; 10.354 ; 10.354 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24]  ; PTM1_CLK125 ; 10.143 ; 10.143 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25]  ; PTM1_CLK125 ; 10.096 ; 10.096 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26]  ; PTM1_CLK125 ; 10.256 ; 10.256 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27]  ; PTM1_CLK125 ; 10.483 ; 10.483 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28]  ; PTM1_CLK125 ; 9.858  ; 9.858  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29]  ; PTM1_CLK125 ; 10.953 ; 10.953 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30]  ; PTM1_CLK125 ; 10.458 ; 10.458 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31]  ; PTM1_CLK125 ; 10.626 ; 10.626 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32]  ; PTM1_CLK125 ; 9.937  ; 9.937  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33]  ; PTM1_CLK125 ; 10.773 ; 10.773 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34]  ; PTM1_CLK125 ; 10.833 ; 10.833 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35]  ; PTM1_CLK125 ; 11.033 ; 11.033 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RFCLK     ; PTM1_CLK125 ; 10.580 ; 10.580 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RST       ; PTM1_CLK125 ; 11.072 ; 11.072 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TDAT[*]   ; PTM1_CLK125 ; 8.534  ; 8.534  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[0]  ; PTM1_CLK125 ; 11.211 ; 11.211 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[1]  ; PTM1_CLK125 ; 12.884 ; 12.884 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[2]  ; PTM1_CLK125 ; 13.158 ; 13.158 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[3]  ; PTM1_CLK125 ; 12.542 ; 12.542 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[4]  ; PTM1_CLK125 ; 13.696 ; 13.696 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[5]  ; PTM1_CLK125 ; 11.866 ; 11.866 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[6]  ; PTM1_CLK125 ; 12.894 ; 12.894 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[7]  ; PTM1_CLK125 ; 12.267 ; 12.267 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[8]  ; PTM1_CLK125 ; 12.722 ; 12.722 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[9]  ; PTM1_CLK125 ; 12.602 ; 12.602 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[10] ; PTM1_CLK125 ; 10.632 ; 10.632 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[11] ; PTM1_CLK125 ; 11.191 ; 11.191 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[12] ; PTM1_CLK125 ; 10.544 ; 10.544 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[13] ; PTM1_CLK125 ; 10.251 ; 10.251 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[14] ; PTM1_CLK125 ; 9.839  ; 9.839  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[15] ; PTM1_CLK125 ; 12.899 ; 12.899 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[16] ; PTM1_CLK125 ; 9.708  ; 9.708  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[17] ; PTM1_CLK125 ; 9.733  ; 9.733  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[18] ; PTM1_CLK125 ; 8.534  ; 8.534  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[19] ; PTM1_CLK125 ; 8.823  ; 8.823  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[20] ; PTM1_CLK125 ; 9.405  ; 9.405  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[21] ; PTM1_CLK125 ; 9.698  ; 9.698  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[22] ; PTM1_CLK125 ; 9.240  ; 9.240  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[23] ; PTM1_CLK125 ; 9.442  ; 9.442  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[24] ; PTM1_CLK125 ; 10.174 ; 10.174 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[25] ; PTM1_CLK125 ; 9.779  ; 9.779  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[26] ; PTM1_CLK125 ; 9.878  ; 9.878  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[27] ; PTM1_CLK125 ; 10.104 ; 10.104 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[28] ; PTM1_CLK125 ; 10.103 ; 10.103 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[29] ; PTM1_CLK125 ; 9.926  ; 9.926  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[30] ; PTM1_CLK125 ; 10.209 ; 10.209 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[31] ; PTM1_CLK125 ; 9.404  ; 9.404  ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TENB[*]   ; PTM1_CLK125 ; 8.476  ; 8.476  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[0]  ; PTM1_CLK125 ; 10.830 ; 10.830 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[1]  ; PTM1_CLK125 ; 10.773 ; 10.773 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[2]  ; PTM1_CLK125 ; 8.476  ; 8.476  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[3]  ; PTM1_CLK125 ; 11.055 ; 11.055 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TEOP[*]   ; PTM1_CLK125 ; 9.100  ; 9.100  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[0]  ; PTM1_CLK125 ; 11.277 ; 11.277 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[1]  ; PTM1_CLK125 ; 10.434 ; 10.434 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[2]  ; PTM1_CLK125 ; 9.100  ; 9.100  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[3]  ; PTM1_CLK125 ; 10.296 ; 10.296 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TERR[*]   ; PTM1_CLK125 ; 9.684  ; 9.684  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[0]  ; PTM1_CLK125 ; 11.332 ; 11.332 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[1]  ; PTM1_CLK125 ; 11.984 ; 11.984 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[2]  ; PTM1_CLK125 ; 9.684  ; 9.684  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[3]  ; PTM1_CLK125 ; 10.318 ; 10.318 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TFCLK     ; PTM1_CLK125 ; 5.894  ; 5.894  ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TSOP[*]   ; PTM1_CLK125 ; 9.397  ; 9.397  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[0]  ; PTM1_CLK125 ; 13.670 ; 13.670 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[1]  ; PTM1_CLK125 ; 12.603 ; 12.603 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[2]  ; PTM1_CLK125 ; 9.397  ; 9.397  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[3]  ; PTM1_CLK125 ; 9.666  ; 9.666  ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RFCLK     ; PTM1_CLK125 ; 10.580 ; 10.580 ; Fall       ; PTM1_CLK125     ;
+; PTM1_MAC1_TFCLK     ; PTM1_CLK125 ; 5.894  ; 5.894  ; Fall       ; PTM1_CLK125     ;
++---------------------+-------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------+
+; Propagation Delay                                      ;
++------------+---------------+--------+----+----+--------+
+; Input Port ; Output Port   ; RR     ; RF ; FR ; FF     ;
++------------+---------------+--------+----+----+--------+
+; HRESET     ; PTM1_MAC1_RST ; 14.336 ;    ;    ; 14.336 ;
+; SRESET     ; PTM1_MAC1_RST ; 14.315 ;    ;    ; 14.315 ;
++------------+---------------+--------+----+----+--------+
+
+
++--------------------------------------------------------+
+; Minimum Propagation Delay                              ;
++------------+---------------+--------+----+----+--------+
+; Input Port ; Output Port   ; RR     ; RF ; FR ; FF     ;
++------------+---------------+--------+----+----+--------+
+; HRESET     ; PTM1_MAC1_RST ; 14.336 ;    ;    ; 14.336 ;
+; SRESET     ; PTM1_MAC1_RST ; 14.315 ;    ;    ; 14.315 ;
++------------+---------------+--------+----+----+--------+
+
+
++---------------------------------------------------------------------------------+
+; Output Enable Times                                                             ;
++--------------------+-------------+--------+------+------------+-----------------+
+; Data Port          ; Clock Port  ; Rise   ; Fall ; Clock Edge ; Clock Reference ;
++--------------------+-------------+--------+------+------------+-----------------+
+; CPU_PORTX_DAT[*]   ; PTM1_CLK125 ; 8.016  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]  ; PTM1_CLK125 ; 8.016  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]  ; PTM1_CLK125 ; 8.756  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]  ; PTM1_CLK125 ; 9.301  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]  ; PTM1_CLK125 ; 9.063  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]  ; PTM1_CLK125 ; 9.352  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]  ; PTM1_CLK125 ; 9.131  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]  ; PTM1_CLK125 ; 9.120  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]  ; PTM1_CLK125 ; 8.921  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]  ; PTM1_CLK125 ; 8.725  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]  ; PTM1_CLK125 ; 8.831  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10] ; PTM1_CLK125 ; 9.103  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11] ; PTM1_CLK125 ; 9.069  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12] ; PTM1_CLK125 ; 8.421  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13] ; PTM1_CLK125 ; 9.507  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14] ; PTM1_CLK125 ; 9.281  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15] ; PTM1_CLK125 ; 9.141  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16] ; PTM1_CLK125 ; 10.041 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17] ; PTM1_CLK125 ; 10.006 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18] ; PTM1_CLK125 ; 9.600  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19] ; PTM1_CLK125 ; 9.115  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20] ; PTM1_CLK125 ; 9.840  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21] ; PTM1_CLK125 ; 9.706  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22] ; PTM1_CLK125 ; 9.900  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23] ; PTM1_CLK125 ; 9.687  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24] ; PTM1_CLK125 ; 9.778  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25] ; PTM1_CLK125 ; 9.883  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26] ; PTM1_CLK125 ; 10.052 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27] ; PTM1_CLK125 ; 9.840  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28] ; PTM1_CLK125 ; 9.884  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29] ; PTM1_CLK125 ; 9.710  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30] ; PTM1_CLK125 ; 10.436 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31] ; PTM1_CLK125 ; 10.368 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32] ; PTM1_CLK125 ; 10.410 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33] ; PTM1_CLK125 ; 10.661 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34] ; PTM1_CLK125 ; 10.830 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35] ; PTM1_CLK125 ; 10.874 ;      ; Rise       ; PTM1_CLK125     ;
++--------------------+-------------+--------+------+------------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Minimum Output Enable Times                                                     ;
++--------------------+-------------+--------+------+------------+-----------------+
+; Data Port          ; Clock Port  ; Rise   ; Fall ; Clock Edge ; Clock Reference ;
++--------------------+-------------+--------+------+------------+-----------------+
+; CPU_PORTX_DAT[*]   ; PTM1_CLK125 ; 8.016  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]  ; PTM1_CLK125 ; 8.016  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]  ; PTM1_CLK125 ; 8.756  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]  ; PTM1_CLK125 ; 9.301  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]  ; PTM1_CLK125 ; 9.063  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]  ; PTM1_CLK125 ; 9.352  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]  ; PTM1_CLK125 ; 9.131  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]  ; PTM1_CLK125 ; 9.120  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]  ; PTM1_CLK125 ; 8.921  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]  ; PTM1_CLK125 ; 8.725  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]  ; PTM1_CLK125 ; 8.831  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10] ; PTM1_CLK125 ; 9.103  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11] ; PTM1_CLK125 ; 9.069  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12] ; PTM1_CLK125 ; 8.421  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13] ; PTM1_CLK125 ; 9.507  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14] ; PTM1_CLK125 ; 9.281  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15] ; PTM1_CLK125 ; 9.141  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16] ; PTM1_CLK125 ; 10.041 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17] ; PTM1_CLK125 ; 10.006 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18] ; PTM1_CLK125 ; 9.600  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19] ; PTM1_CLK125 ; 9.115  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20] ; PTM1_CLK125 ; 9.840  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21] ; PTM1_CLK125 ; 9.706  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22] ; PTM1_CLK125 ; 9.900  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23] ; PTM1_CLK125 ; 9.687  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24] ; PTM1_CLK125 ; 9.778  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25] ; PTM1_CLK125 ; 9.883  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26] ; PTM1_CLK125 ; 10.052 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27] ; PTM1_CLK125 ; 9.840  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28] ; PTM1_CLK125 ; 9.884  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29] ; PTM1_CLK125 ; 9.710  ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30] ; PTM1_CLK125 ; 10.436 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31] ; PTM1_CLK125 ; 10.368 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32] ; PTM1_CLK125 ; 10.410 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33] ; PTM1_CLK125 ; 10.661 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34] ; PTM1_CLK125 ; 10.830 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35] ; PTM1_CLK125 ; 10.874 ;      ; Rise       ; PTM1_CLK125     ;
++--------------------+-------------+--------+------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Output Disable Times                                                                    ;
++--------------------+-------------+-----------+-----------+------------+-----------------+
+; Data Port          ; Clock Port  ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++--------------------+-------------+-----------+-----------+------------+-----------------+
+; CPU_PORTX_DAT[*]   ; PTM1_CLK125 ; 8.016     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]  ; PTM1_CLK125 ; 8.016     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]  ; PTM1_CLK125 ; 8.756     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]  ; PTM1_CLK125 ; 9.301     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]  ; PTM1_CLK125 ; 9.063     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]  ; PTM1_CLK125 ; 9.352     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]  ; PTM1_CLK125 ; 9.131     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]  ; PTM1_CLK125 ; 9.120     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]  ; PTM1_CLK125 ; 8.921     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]  ; PTM1_CLK125 ; 8.725     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]  ; PTM1_CLK125 ; 8.831     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10] ; PTM1_CLK125 ; 9.103     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11] ; PTM1_CLK125 ; 9.069     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12] ; PTM1_CLK125 ; 8.421     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13] ; PTM1_CLK125 ; 9.507     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14] ; PTM1_CLK125 ; 9.281     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15] ; PTM1_CLK125 ; 9.141     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16] ; PTM1_CLK125 ; 10.041    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17] ; PTM1_CLK125 ; 10.006    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18] ; PTM1_CLK125 ; 9.600     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19] ; PTM1_CLK125 ; 9.115     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20] ; PTM1_CLK125 ; 9.840     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21] ; PTM1_CLK125 ; 9.706     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22] ; PTM1_CLK125 ; 9.900     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23] ; PTM1_CLK125 ; 9.687     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24] ; PTM1_CLK125 ; 9.778     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25] ; PTM1_CLK125 ; 9.883     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26] ; PTM1_CLK125 ; 10.052    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27] ; PTM1_CLK125 ; 9.840     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28] ; PTM1_CLK125 ; 9.884     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29] ; PTM1_CLK125 ; 9.710     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30] ; PTM1_CLK125 ; 10.436    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31] ; PTM1_CLK125 ; 10.368    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32] ; PTM1_CLK125 ; 10.410    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33] ; PTM1_CLK125 ; 10.661    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34] ; PTM1_CLK125 ; 10.830    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35] ; PTM1_CLK125 ; 10.874    ;           ; Rise       ; PTM1_CLK125     ;
++--------------------+-------------+-----------+-----------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                            ;
++--------------------+-------------+-----------+-----------+------------+-----------------+
+; Data Port          ; Clock Port  ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++--------------------+-------------+-----------+-----------+------------+-----------------+
+; CPU_PORTX_DAT[*]   ; PTM1_CLK125 ; 8.016     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]  ; PTM1_CLK125 ; 8.016     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]  ; PTM1_CLK125 ; 8.756     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]  ; PTM1_CLK125 ; 9.301     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]  ; PTM1_CLK125 ; 9.063     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]  ; PTM1_CLK125 ; 9.352     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]  ; PTM1_CLK125 ; 9.131     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]  ; PTM1_CLK125 ; 9.120     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]  ; PTM1_CLK125 ; 8.921     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]  ; PTM1_CLK125 ; 8.725     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]  ; PTM1_CLK125 ; 8.831     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10] ; PTM1_CLK125 ; 9.103     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11] ; PTM1_CLK125 ; 9.069     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12] ; PTM1_CLK125 ; 8.421     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13] ; PTM1_CLK125 ; 9.507     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14] ; PTM1_CLK125 ; 9.281     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15] ; PTM1_CLK125 ; 9.141     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16] ; PTM1_CLK125 ; 10.041    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17] ; PTM1_CLK125 ; 10.006    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18] ; PTM1_CLK125 ; 9.600     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19] ; PTM1_CLK125 ; 9.115     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20] ; PTM1_CLK125 ; 9.840     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21] ; PTM1_CLK125 ; 9.706     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22] ; PTM1_CLK125 ; 9.900     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23] ; PTM1_CLK125 ; 9.687     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24] ; PTM1_CLK125 ; 9.778     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25] ; PTM1_CLK125 ; 9.883     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26] ; PTM1_CLK125 ; 10.052    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27] ; PTM1_CLK125 ; 9.840     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28] ; PTM1_CLK125 ; 9.884     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29] ; PTM1_CLK125 ; 9.710     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30] ; PTM1_CLK125 ; 10.436    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31] ; PTM1_CLK125 ; 10.368    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32] ; PTM1_CLK125 ; 10.410    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33] ; PTM1_CLK125 ; 10.661    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34] ; PTM1_CLK125 ; 10.830    ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35] ; PTM1_CLK125 ; 10.874    ;           ; Rise       ; PTM1_CLK125     ;
++--------------------+-------------+-----------+-----------+------------+-----------------+
+
+
++--------------------------------------+
+; Fast Model Setup Summary             ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; PTM1_CLK125 ; -1.901 ; -7372.635     ;
++-------------+--------+---------------+
+
+
++-------------------------------------+
+; Fast Model Hold Summary             ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; PTM1_CLK125 ; 0.216 ; 0.000         ;
++-------------+-------+---------------+
+
+
++--------------------------------------+
+; Fast Model Recovery Summary          ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; PTM1_CLK125 ; -1.371 ; -2979.183     ;
++-------------+--------+---------------+
+
+
++-------------------------------------+
+; Fast Model Removal Summary          ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; PTM1_CLK125 ; 2.249 ; 0.000         ;
++-------------+-------+---------------+
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------------+--------+-----------------+
+; Clock       ; Slack  ; End Point TNS   ;
++-------------+--------+-----------------+
+; PTM1_CLK125 ; -1.000 ; -8917.944       ;
++-------------+--------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Setup Times                                                                      ;
++---------------------+-------------+-------+-------+------------+-----------------+
+; Data Port           ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------------+-------------+-------+-------+------------+-----------------+
+; CPU_PORTX_A[*]      ; PTM1_CLK125 ; 5.690 ; 5.690 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[0]     ; PTM1_CLK125 ; 5.501 ; 5.501 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[1]     ; PTM1_CLK125 ; 5.690 ; 5.690 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[2]     ; PTM1_CLK125 ; 4.979 ; 4.979 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[3]     ; PTM1_CLK125 ; 5.186 ; 5.186 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[4]     ; PTM1_CLK125 ; 5.381 ; 5.381 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[5]     ; PTM1_CLK125 ; 4.850 ; 4.850 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[6]     ; PTM1_CLK125 ; 5.427 ; 5.427 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[7]     ; PTM1_CLK125 ; 5.302 ; 5.302 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[8]     ; PTM1_CLK125 ; 5.316 ; 5.316 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[9]     ; PTM1_CLK125 ; 5.332 ; 5.332 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[10]    ; PTM1_CLK125 ; 5.440 ; 5.440 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[11]    ; PTM1_CLK125 ; 4.963 ; 4.963 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[12]    ; PTM1_CLK125 ; 5.167 ; 5.167 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[13]    ; PTM1_CLK125 ; 5.310 ; 5.310 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[14]    ; PTM1_CLK125 ; 5.171 ; 5.171 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[15]    ; PTM1_CLK125 ; 5.060 ; 5.060 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[16]    ; PTM1_CLK125 ; 5.077 ; 5.077 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[17]    ; PTM1_CLK125 ; 5.271 ; 5.271 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[18]    ; PTM1_CLK125 ; 5.054 ; 5.054 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[19]    ; PTM1_CLK125 ; 5.037 ; 5.037 ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_DAT[*]    ; PTM1_CLK125 ; 2.737 ; 2.737 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]   ; PTM1_CLK125 ; 2.092 ; 2.092 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]   ; PTM1_CLK125 ; 1.864 ; 1.864 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]   ; PTM1_CLK125 ; 2.037 ; 2.037 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]   ; PTM1_CLK125 ; 1.948 ; 1.948 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]   ; PTM1_CLK125 ; 2.106 ; 2.106 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]   ; PTM1_CLK125 ; 1.979 ; 1.979 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]   ; PTM1_CLK125 ; 2.210 ; 2.210 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]   ; PTM1_CLK125 ; 2.123 ; 2.123 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]   ; PTM1_CLK125 ; 2.461 ; 2.461 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]   ; PTM1_CLK125 ; 2.359 ; 2.359 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10]  ; PTM1_CLK125 ; 2.316 ; 2.316 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11]  ; PTM1_CLK125 ; 2.737 ; 2.737 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12]  ; PTM1_CLK125 ; 2.237 ; 2.237 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13]  ; PTM1_CLK125 ; 2.598 ; 2.598 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14]  ; PTM1_CLK125 ; 2.393 ; 2.393 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15]  ; PTM1_CLK125 ; 2.367 ; 2.367 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16]  ; PTM1_CLK125 ; 2.532 ; 2.532 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17]  ; PTM1_CLK125 ; 2.333 ; 2.333 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18]  ; PTM1_CLK125 ; 2.713 ; 2.713 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19]  ; PTM1_CLK125 ; 2.309 ; 2.309 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20]  ; PTM1_CLK125 ; 2.445 ; 2.445 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21]  ; PTM1_CLK125 ; 2.305 ; 2.305 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22]  ; PTM1_CLK125 ; 2.354 ; 2.354 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23]  ; PTM1_CLK125 ; 2.480 ; 2.480 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24]  ; PTM1_CLK125 ; 2.370 ; 2.370 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25]  ; PTM1_CLK125 ; 2.404 ; 2.404 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26]  ; PTM1_CLK125 ; 2.594 ; 2.594 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27]  ; PTM1_CLK125 ; 2.247 ; 2.247 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28]  ; PTM1_CLK125 ; 2.458 ; 2.458 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29]  ; PTM1_CLK125 ; 2.238 ; 2.238 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30]  ; PTM1_CLK125 ; 2.430 ; 2.430 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31]  ; PTM1_CLK125 ; 2.317 ; 2.317 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32]  ; PTM1_CLK125 ; 2.380 ; 2.380 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33]  ; PTM1_CLK125 ; 2.121 ; 2.121 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34]  ; PTM1_CLK125 ; 2.320 ; 2.320 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35]  ; PTM1_CLK125 ; 2.444 ; 2.444 ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_OE        ; PTM1_CLK125 ; 2.151 ; 2.151 ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_WE        ; PTM1_CLK125 ; 2.330 ; 2.330 ; Rise       ; PTM1_CLK125     ;
+; CPU_PTM1_CS         ; PTM1_CLK125 ; 3.353 ; 3.353 ; Rise       ; PTM1_CLK125     ;
+; HRESET              ; PTM1_CLK125 ; 5.007 ; 5.007 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RDAT[*]   ; PTM1_CLK125 ; 2.985 ; 2.985 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[0]  ; PTM1_CLK125 ; 2.813 ; 2.813 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[1]  ; PTM1_CLK125 ; 2.801 ; 2.801 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[2]  ; PTM1_CLK125 ; 2.769 ; 2.769 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[3]  ; PTM1_CLK125 ; 2.803 ; 2.803 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[4]  ; PTM1_CLK125 ; 2.844 ; 2.844 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[5]  ; PTM1_CLK125 ; 2.904 ; 2.904 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[6]  ; PTM1_CLK125 ; 2.980 ; 2.980 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[7]  ; PTM1_CLK125 ; 2.985 ; 2.985 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[8]  ; PTM1_CLK125 ; 2.124 ; 2.124 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[9]  ; PTM1_CLK125 ; 2.083 ; 2.083 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[10] ; PTM1_CLK125 ; 2.081 ; 2.081 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[11] ; PTM1_CLK125 ; 1.964 ; 1.964 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[12] ; PTM1_CLK125 ; 2.134 ; 2.134 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[13] ; PTM1_CLK125 ; 2.159 ; 2.159 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[14] ; PTM1_CLK125 ; 2.143 ; 2.143 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[15] ; PTM1_CLK125 ; 2.026 ; 2.026 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[16] ; PTM1_CLK125 ; 2.778 ; 2.778 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[17] ; PTM1_CLK125 ; 2.690 ; 2.690 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[18] ; PTM1_CLK125 ; 2.522 ; 2.522 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[19] ; PTM1_CLK125 ; 2.641 ; 2.641 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[20] ; PTM1_CLK125 ; 2.477 ; 2.477 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[21] ; PTM1_CLK125 ; 2.518 ; 2.518 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[22] ; PTM1_CLK125 ; 2.398 ; 2.398 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[23] ; PTM1_CLK125 ; 2.401 ; 2.401 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[24] ; PTM1_CLK125 ; 2.510 ; 2.510 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[25] ; PTM1_CLK125 ; 2.378 ; 2.378 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[26] ; PTM1_CLK125 ; 2.168 ; 2.168 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[27] ; PTM1_CLK125 ; 2.281 ; 2.281 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[28] ; PTM1_CLK125 ; 2.509 ; 2.509 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[29] ; PTM1_CLK125 ; 2.298 ; 2.298 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[30] ; PTM1_CLK125 ; 2.271 ; 2.271 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[31] ; PTM1_CLK125 ; 2.428 ; 2.428 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_REOP[*]   ; PTM1_CLK125 ; 4.410 ; 4.410 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[0]  ; PTM1_CLK125 ; 4.410 ; 4.410 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[1]  ; PTM1_CLK125 ; 3.294 ; 3.294 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[2]  ; PTM1_CLK125 ; 3.717 ; 3.717 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[3]  ; PTM1_CLK125 ; 3.715 ; 3.715 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RERR[*]   ; PTM1_CLK125 ; 2.231 ; 2.231 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[0]  ; PTM1_CLK125 ; 2.231 ; 2.231 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[1]  ; PTM1_CLK125 ; 1.367 ; 1.367 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[2]  ; PTM1_CLK125 ; 1.836 ; 1.836 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[3]  ; PTM1_CLK125 ; 1.634 ; 1.634 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RSOP[*]   ; PTM1_CLK125 ; 3.173 ; 3.173 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[0]  ; PTM1_CLK125 ; 3.173 ; 3.173 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[1]  ; PTM1_CLK125 ; 2.155 ; 2.155 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[2]  ; PTM1_CLK125 ; 2.898 ; 2.898 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[3]  ; PTM1_CLK125 ; 2.538 ; 2.538 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RVAL[*]   ; PTM1_CLK125 ; 3.386 ; 3.386 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[0]  ; PTM1_CLK125 ; 3.386 ; 3.386 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[1]  ; PTM1_CLK125 ; 2.674 ; 2.674 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[2]  ; PTM1_CLK125 ; 2.782 ; 2.782 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[3]  ; PTM1_CLK125 ; 2.758 ; 2.758 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_DTPA[*]   ; PTM1_CLK125 ; 2.731 ; 2.731 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[0]  ; PTM1_CLK125 ; 2.731 ; 2.731 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[1]  ; PTM1_CLK125 ; 2.398 ; 2.398 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[2]  ; PTM1_CLK125 ; 2.017 ; 2.017 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[3]  ; PTM1_CLK125 ; 2.230 ; 2.230 ; Rise       ; PTM1_CLK125     ;
+; SRESET              ; PTM1_CLK125 ; 4.099 ; 4.099 ; Rise       ; PTM1_CLK125     ;
++---------------------+-------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------+
+; Hold Times                                                                         ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; Data Port           ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; CPU_PORTX_A[*]      ; PTM1_CLK125 ; -2.147 ; -2.147 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[0]     ; PTM1_CLK125 ; -2.349 ; -2.349 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[1]     ; PTM1_CLK125 ; -2.385 ; -2.385 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[2]     ; PTM1_CLK125 ; -2.214 ; -2.214 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[3]     ; PTM1_CLK125 ; -2.453 ; -2.453 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[4]     ; PTM1_CLK125 ; -2.741 ; -2.741 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[5]     ; PTM1_CLK125 ; -2.147 ; -2.147 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[6]     ; PTM1_CLK125 ; -2.787 ; -2.787 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[7]     ; PTM1_CLK125 ; -2.662 ; -2.662 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[8]     ; PTM1_CLK125 ; -2.676 ; -2.676 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[9]     ; PTM1_CLK125 ; -2.692 ; -2.692 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[10]    ; PTM1_CLK125 ; -2.800 ; -2.800 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[11]    ; PTM1_CLK125 ; -2.249 ; -2.249 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[12]    ; PTM1_CLK125 ; -2.453 ; -2.453 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[13]    ; PTM1_CLK125 ; -2.596 ; -2.596 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[14]    ; PTM1_CLK125 ; -2.457 ; -2.457 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[15]    ; PTM1_CLK125 ; -2.346 ; -2.346 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[16]    ; PTM1_CLK125 ; -2.363 ; -2.363 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[17]    ; PTM1_CLK125 ; -2.532 ; -2.532 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[18]    ; PTM1_CLK125 ; -2.315 ; -2.315 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[19]    ; PTM1_CLK125 ; -2.298 ; -2.298 ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_DAT[*]    ; PTM1_CLK125 ; -1.395 ; -1.395 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]   ; PTM1_CLK125 ; -1.513 ; -1.513 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]   ; PTM1_CLK125 ; -1.395 ; -1.395 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]   ; PTM1_CLK125 ; -1.594 ; -1.594 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]   ; PTM1_CLK125 ; -1.470 ; -1.470 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]   ; PTM1_CLK125 ; -1.680 ; -1.680 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]   ; PTM1_CLK125 ; -1.576 ; -1.576 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]   ; PTM1_CLK125 ; -1.576 ; -1.576 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]   ; PTM1_CLK125 ; -1.649 ; -1.649 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]   ; PTM1_CLK125 ; -1.705 ; -1.705 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]   ; PTM1_CLK125 ; -1.529 ; -1.529 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10]  ; PTM1_CLK125 ; -1.706 ; -1.706 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11]  ; PTM1_CLK125 ; -1.835 ; -1.835 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12]  ; PTM1_CLK125 ; -1.836 ; -1.836 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13]  ; PTM1_CLK125 ; -1.825 ; -1.825 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14]  ; PTM1_CLK125 ; -1.752 ; -1.752 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15]  ; PTM1_CLK125 ; -1.779 ; -1.779 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16]  ; PTM1_CLK125 ; -1.783 ; -1.783 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17]  ; PTM1_CLK125 ; -1.923 ; -1.923 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18]  ; PTM1_CLK125 ; -2.031 ; -2.031 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19]  ; PTM1_CLK125 ; -1.801 ; -1.801 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20]  ; PTM1_CLK125 ; -1.797 ; -1.797 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21]  ; PTM1_CLK125 ; -1.907 ; -1.907 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22]  ; PTM1_CLK125 ; -1.832 ; -1.832 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23]  ; PTM1_CLK125 ; -1.791 ; -1.791 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24]  ; PTM1_CLK125 ; -2.029 ; -2.029 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25]  ; PTM1_CLK125 ; -1.763 ; -1.763 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26]  ; PTM1_CLK125 ; -2.052 ; -2.052 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27]  ; PTM1_CLK125 ; -1.860 ; -1.860 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28]  ; PTM1_CLK125 ; -1.810 ; -1.810 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29]  ; PTM1_CLK125 ; -1.684 ; -1.684 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30]  ; PTM1_CLK125 ; -1.862 ; -1.862 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31]  ; PTM1_CLK125 ; -1.833 ; -1.833 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32]  ; PTM1_CLK125 ; -2.010 ; -2.010 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33]  ; PTM1_CLK125 ; -1.882 ; -1.882 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34]  ; PTM1_CLK125 ; -2.116 ; -2.116 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35]  ; PTM1_CLK125 ; -1.975 ; -1.975 ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_OE        ; PTM1_CLK125 ; -1.861 ; -1.861 ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_WE        ; PTM1_CLK125 ; -2.203 ; -2.203 ; Rise       ; PTM1_CLK125     ;
+; CPU_PTM1_CS         ; PTM1_CLK125 ; -2.114 ; -2.114 ; Rise       ; PTM1_CLK125     ;
+; HRESET              ; PTM1_CLK125 ; -1.464 ; -1.464 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RDAT[*]   ; PTM1_CLK125 ; -1.292 ; -1.292 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[0]  ; PTM1_CLK125 ; -2.199 ; -2.199 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[1]  ; PTM1_CLK125 ; -1.985 ; -1.985 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[2]  ; PTM1_CLK125 ; -2.174 ; -2.174 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[3]  ; PTM1_CLK125 ; -2.147 ; -2.147 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[4]  ; PTM1_CLK125 ; -2.128 ; -2.128 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[5]  ; PTM1_CLK125 ; -2.320 ; -2.320 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[6]  ; PTM1_CLK125 ; -2.476 ; -2.476 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[7]  ; PTM1_CLK125 ; -2.424 ; -2.424 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[8]  ; PTM1_CLK125 ; -1.684 ; -1.684 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[9]  ; PTM1_CLK125 ; -1.692 ; -1.692 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[10] ; PTM1_CLK125 ; -1.692 ; -1.692 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[11] ; PTM1_CLK125 ; -1.366 ; -1.366 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[12] ; PTM1_CLK125 ; -1.601 ; -1.601 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[13] ; PTM1_CLK125 ; -1.622 ; -1.622 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[14] ; PTM1_CLK125 ; -1.629 ; -1.629 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[15] ; PTM1_CLK125 ; -1.292 ; -1.292 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[16] ; PTM1_CLK125 ; -2.142 ; -2.142 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[17] ; PTM1_CLK125 ; -2.041 ; -2.041 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[18] ; PTM1_CLK125 ; -2.126 ; -2.126 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[19] ; PTM1_CLK125 ; -2.136 ; -2.136 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[20] ; PTM1_CLK125 ; -2.021 ; -2.021 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[21] ; PTM1_CLK125 ; -2.037 ; -2.037 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[22] ; PTM1_CLK125 ; -2.047 ; -2.047 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[23] ; PTM1_CLK125 ; -1.860 ; -1.860 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[24] ; PTM1_CLK125 ; -1.596 ; -1.596 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[25] ; PTM1_CLK125 ; -1.532 ; -1.532 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[26] ; PTM1_CLK125 ; -1.566 ; -1.566 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[27] ; PTM1_CLK125 ; -1.667 ; -1.667 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[28] ; PTM1_CLK125 ; -1.817 ; -1.817 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[29] ; PTM1_CLK125 ; -1.796 ; -1.796 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[30] ; PTM1_CLK125 ; -1.605 ; -1.605 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[31] ; PTM1_CLK125 ; -1.776 ; -1.776 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_REOP[*]   ; PTM1_CLK125 ; -1.386 ; -1.386 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[0]  ; PTM1_CLK125 ; -2.052 ; -2.052 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[1]  ; PTM1_CLK125 ; -1.386 ; -1.386 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[2]  ; PTM1_CLK125 ; -1.888 ; -1.888 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[3]  ; PTM1_CLK125 ; -1.650 ; -1.650 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RERR[*]   ; PTM1_CLK125 ; -1.245 ; -1.245 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[0]  ; PTM1_CLK125 ; -2.109 ; -2.109 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[1]  ; PTM1_CLK125 ; -1.245 ; -1.245 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[2]  ; PTM1_CLK125 ; -1.714 ; -1.714 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[3]  ; PTM1_CLK125 ; -1.512 ; -1.512 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RSOP[*]   ; PTM1_CLK125 ; -1.403 ; -1.403 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[0]  ; PTM1_CLK125 ; -2.177 ; -2.177 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[1]  ; PTM1_CLK125 ; -1.403 ; -1.403 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[2]  ; PTM1_CLK125 ; -1.870 ; -1.870 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[3]  ; PTM1_CLK125 ; -1.692 ; -1.692 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RVAL[*]   ; PTM1_CLK125 ; -1.406 ; -1.406 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[0]  ; PTM1_CLK125 ; -1.993 ; -1.993 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[1]  ; PTM1_CLK125 ; -1.479 ; -1.479 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[2]  ; PTM1_CLK125 ; -1.474 ; -1.474 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[3]  ; PTM1_CLK125 ; -1.406 ; -1.406 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_DTPA[*]   ; PTM1_CLK125 ; -1.895 ; -1.895 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[0]  ; PTM1_CLK125 ; -2.609 ; -2.609 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[1]  ; PTM1_CLK125 ; -2.276 ; -2.276 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[2]  ; PTM1_CLK125 ; -1.895 ; -1.895 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[3]  ; PTM1_CLK125 ; -2.108 ; -2.108 ; Rise       ; PTM1_CLK125     ;
+; SRESET              ; PTM1_CLK125 ; -1.561 ; -1.561 ; Rise       ; PTM1_CLK125     ;
++---------------------+-------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++---------------------+-------------+-------+-------+------------+-----------------+
+; Data Port           ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------------+-------------+-------+-------+------------+-----------------+
+; CPU_PORTX_DAT[*]    ; PTM1_CLK125 ; 4.692 ; 4.692 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]   ; PTM1_CLK125 ; 3.871 ; 3.871 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]   ; PTM1_CLK125 ; 3.815 ; 3.815 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]   ; PTM1_CLK125 ; 3.958 ; 3.958 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]   ; PTM1_CLK125 ; 3.988 ; 3.988 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]   ; PTM1_CLK125 ; 4.011 ; 4.011 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]   ; PTM1_CLK125 ; 4.162 ; 4.162 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]   ; PTM1_CLK125 ; 4.145 ; 4.145 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]   ; PTM1_CLK125 ; 3.828 ; 3.828 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]   ; PTM1_CLK125 ; 3.704 ; 3.704 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]   ; PTM1_CLK125 ; 3.852 ; 3.852 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10]  ; PTM1_CLK125 ; 4.082 ; 4.082 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11]  ; PTM1_CLK125 ; 4.176 ; 4.176 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12]  ; PTM1_CLK125 ; 4.242 ; 4.242 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13]  ; PTM1_CLK125 ; 4.162 ; 4.162 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14]  ; PTM1_CLK125 ; 4.026 ; 4.026 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15]  ; PTM1_CLK125 ; 4.111 ; 4.111 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16]  ; PTM1_CLK125 ; 4.332 ; 4.332 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17]  ; PTM1_CLK125 ; 4.314 ; 4.314 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18]  ; PTM1_CLK125 ; 4.208 ; 4.208 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19]  ; PTM1_CLK125 ; 4.451 ; 4.451 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20]  ; PTM1_CLK125 ; 4.293 ; 4.293 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21]  ; PTM1_CLK125 ; 4.357 ; 4.357 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22]  ; PTM1_CLK125 ; 4.260 ; 4.260 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23]  ; PTM1_CLK125 ; 4.440 ; 4.440 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24]  ; PTM1_CLK125 ; 4.323 ; 4.323 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25]  ; PTM1_CLK125 ; 4.311 ; 4.311 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26]  ; PTM1_CLK125 ; 4.372 ; 4.372 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27]  ; PTM1_CLK125 ; 4.483 ; 4.483 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28]  ; PTM1_CLK125 ; 4.307 ; 4.307 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29]  ; PTM1_CLK125 ; 4.650 ; 4.650 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30]  ; PTM1_CLK125 ; 4.449 ; 4.449 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31]  ; PTM1_CLK125 ; 4.514 ; 4.514 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32]  ; PTM1_CLK125 ; 4.347 ; 4.347 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33]  ; PTM1_CLK125 ; 4.609 ; 4.609 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34]  ; PTM1_CLK125 ; 4.620 ; 4.620 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35]  ; PTM1_CLK125 ; 4.692 ; 4.692 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RFCLK     ; PTM1_CLK125 ; 4.955 ; 4.955 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RST       ; PTM1_CLK125 ; 5.148 ; 5.148 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TDAT[*]   ; PTM1_CLK125 ; 5.712 ; 5.712 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[0]  ; PTM1_CLK125 ; 5.072 ; 5.072 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[1]  ; PTM1_CLK125 ; 5.401 ; 5.401 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[2]  ; PTM1_CLK125 ; 5.451 ; 5.451 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[3]  ; PTM1_CLK125 ; 5.712 ; 5.712 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[4]  ; PTM1_CLK125 ; 5.651 ; 5.651 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[5]  ; PTM1_CLK125 ; 5.187 ; 5.187 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[6]  ; PTM1_CLK125 ; 5.455 ; 5.455 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[7]  ; PTM1_CLK125 ; 5.565 ; 5.565 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[8]  ; PTM1_CLK125 ; 5.631 ; 5.631 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[9]  ; PTM1_CLK125 ; 5.218 ; 5.218 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[10] ; PTM1_CLK125 ; 4.753 ; 4.753 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[11] ; PTM1_CLK125 ; 4.818 ; 4.818 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[12] ; PTM1_CLK125 ; 4.733 ; 4.733 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[13] ; PTM1_CLK125 ; 4.645 ; 4.645 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[14] ; PTM1_CLK125 ; 4.563 ; 4.563 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[15] ; PTM1_CLK125 ; 5.316 ; 5.316 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[16] ; PTM1_CLK125 ; 4.159 ; 4.159 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[17] ; PTM1_CLK125 ; 4.134 ; 4.134 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[18] ; PTM1_CLK125 ; 3.832 ; 3.832 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[19] ; PTM1_CLK125 ; 3.820 ; 3.820 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[20] ; PTM1_CLK125 ; 4.026 ; 4.026 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[21] ; PTM1_CLK125 ; 4.160 ; 4.160 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[22] ; PTM1_CLK125 ; 4.066 ; 4.066 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[23] ; PTM1_CLK125 ; 4.058 ; 4.058 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[24] ; PTM1_CLK125 ; 4.419 ; 4.419 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[25] ; PTM1_CLK125 ; 4.292 ; 4.292 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[26] ; PTM1_CLK125 ; 4.204 ; 4.204 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[27] ; PTM1_CLK125 ; 4.272 ; 4.272 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[28] ; PTM1_CLK125 ; 4.249 ; 4.249 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[29] ; PTM1_CLK125 ; 4.206 ; 4.206 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[30] ; PTM1_CLK125 ; 4.339 ; 4.339 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[31] ; PTM1_CLK125 ; 4.039 ; 4.039 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TENB[*]   ; PTM1_CLK125 ; 5.001 ; 5.001 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[0]  ; PTM1_CLK125 ; 5.001 ; 5.001 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[1]  ; PTM1_CLK125 ; 4.781 ; 4.781 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[2]  ; PTM1_CLK125 ; 3.809 ; 3.809 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[3]  ; PTM1_CLK125 ; 4.610 ; 4.610 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TEOP[*]   ; PTM1_CLK125 ; 5.341 ; 5.341 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[0]  ; PTM1_CLK125 ; 5.341 ; 5.341 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[1]  ; PTM1_CLK125 ; 4.926 ; 4.926 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[2]  ; PTM1_CLK125 ; 4.088 ; 4.088 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[3]  ; PTM1_CLK125 ; 4.371 ; 4.371 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TERR[*]   ; PTM1_CLK125 ; 5.025 ; 5.025 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[0]  ; PTM1_CLK125 ; 5.025 ; 5.025 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[1]  ; PTM1_CLK125 ; 4.968 ; 4.968 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[2]  ; PTM1_CLK125 ; 4.131 ; 4.131 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[3]  ; PTM1_CLK125 ; 4.354 ; 4.354 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TFCLK     ; PTM1_CLK125 ; 2.639 ; 2.639 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TSOP[*]   ; PTM1_CLK125 ; 5.604 ; 5.604 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[0]  ; PTM1_CLK125 ; 5.604 ; 5.604 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[1]  ; PTM1_CLK125 ; 5.208 ; 5.208 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[2]  ; PTM1_CLK125 ; 4.146 ; 4.146 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[3]  ; PTM1_CLK125 ; 4.218 ; 4.218 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RFCLK     ; PTM1_CLK125 ; 4.955 ; 4.955 ; Fall       ; PTM1_CLK125     ;
+; PTM1_MAC1_TFCLK     ; PTM1_CLK125 ; 2.639 ; 2.639 ; Fall       ; PTM1_CLK125     ;
++---------------------+-------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++---------------------+-------------+-------+-------+------------+-----------------+
+; Data Port           ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------------+-------------+-------+-------+------------+-----------------+
+; CPU_PORTX_DAT[*]    ; PTM1_CLK125 ; 3.704 ; 3.704 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]   ; PTM1_CLK125 ; 3.871 ; 3.871 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]   ; PTM1_CLK125 ; 3.815 ; 3.815 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]   ; PTM1_CLK125 ; 3.958 ; 3.958 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]   ; PTM1_CLK125 ; 3.988 ; 3.988 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]   ; PTM1_CLK125 ; 4.011 ; 4.011 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]   ; PTM1_CLK125 ; 4.162 ; 4.162 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]   ; PTM1_CLK125 ; 4.145 ; 4.145 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]   ; PTM1_CLK125 ; 3.828 ; 3.828 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]   ; PTM1_CLK125 ; 3.704 ; 3.704 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]   ; PTM1_CLK125 ; 3.852 ; 3.852 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10]  ; PTM1_CLK125 ; 4.082 ; 4.082 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11]  ; PTM1_CLK125 ; 4.176 ; 4.176 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12]  ; PTM1_CLK125 ; 4.242 ; 4.242 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13]  ; PTM1_CLK125 ; 4.162 ; 4.162 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14]  ; PTM1_CLK125 ; 4.026 ; 4.026 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15]  ; PTM1_CLK125 ; 4.111 ; 4.111 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16]  ; PTM1_CLK125 ; 4.332 ; 4.332 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17]  ; PTM1_CLK125 ; 4.314 ; 4.314 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18]  ; PTM1_CLK125 ; 4.208 ; 4.208 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19]  ; PTM1_CLK125 ; 4.451 ; 4.451 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20]  ; PTM1_CLK125 ; 4.293 ; 4.293 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21]  ; PTM1_CLK125 ; 4.357 ; 4.357 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22]  ; PTM1_CLK125 ; 4.260 ; 4.260 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23]  ; PTM1_CLK125 ; 4.440 ; 4.440 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24]  ; PTM1_CLK125 ; 4.323 ; 4.323 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25]  ; PTM1_CLK125 ; 4.311 ; 4.311 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26]  ; PTM1_CLK125 ; 4.372 ; 4.372 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27]  ; PTM1_CLK125 ; 4.483 ; 4.483 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28]  ; PTM1_CLK125 ; 4.307 ; 4.307 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29]  ; PTM1_CLK125 ; 4.650 ; 4.650 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30]  ; PTM1_CLK125 ; 4.449 ; 4.449 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31]  ; PTM1_CLK125 ; 4.514 ; 4.514 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32]  ; PTM1_CLK125 ; 4.347 ; 4.347 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33]  ; PTM1_CLK125 ; 4.609 ; 4.609 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34]  ; PTM1_CLK125 ; 4.620 ; 4.620 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35]  ; PTM1_CLK125 ; 4.692 ; 4.692 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RFCLK     ; PTM1_CLK125 ; 4.955 ; 4.955 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RST       ; PTM1_CLK125 ; 5.148 ; 5.148 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TDAT[*]   ; PTM1_CLK125 ; 3.820 ; 3.820 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[0]  ; PTM1_CLK125 ; 5.072 ; 5.072 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[1]  ; PTM1_CLK125 ; 5.401 ; 5.401 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[2]  ; PTM1_CLK125 ; 5.451 ; 5.451 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[3]  ; PTM1_CLK125 ; 5.712 ; 5.712 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[4]  ; PTM1_CLK125 ; 5.651 ; 5.651 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[5]  ; PTM1_CLK125 ; 5.187 ; 5.187 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[6]  ; PTM1_CLK125 ; 5.455 ; 5.455 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[7]  ; PTM1_CLK125 ; 5.565 ; 5.565 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[8]  ; PTM1_CLK125 ; 5.631 ; 5.631 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[9]  ; PTM1_CLK125 ; 5.218 ; 5.218 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[10] ; PTM1_CLK125 ; 4.753 ; 4.753 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[11] ; PTM1_CLK125 ; 4.818 ; 4.818 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[12] ; PTM1_CLK125 ; 4.733 ; 4.733 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[13] ; PTM1_CLK125 ; 4.645 ; 4.645 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[14] ; PTM1_CLK125 ; 4.563 ; 4.563 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[15] ; PTM1_CLK125 ; 5.316 ; 5.316 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[16] ; PTM1_CLK125 ; 4.159 ; 4.159 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[17] ; PTM1_CLK125 ; 4.134 ; 4.134 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[18] ; PTM1_CLK125 ; 3.832 ; 3.832 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[19] ; PTM1_CLK125 ; 3.820 ; 3.820 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[20] ; PTM1_CLK125 ; 4.026 ; 4.026 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[21] ; PTM1_CLK125 ; 4.160 ; 4.160 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[22] ; PTM1_CLK125 ; 4.066 ; 4.066 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[23] ; PTM1_CLK125 ; 4.058 ; 4.058 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[24] ; PTM1_CLK125 ; 4.419 ; 4.419 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[25] ; PTM1_CLK125 ; 4.292 ; 4.292 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[26] ; PTM1_CLK125 ; 4.204 ; 4.204 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[27] ; PTM1_CLK125 ; 4.272 ; 4.272 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[28] ; PTM1_CLK125 ; 4.249 ; 4.249 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[29] ; PTM1_CLK125 ; 4.206 ; 4.206 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[30] ; PTM1_CLK125 ; 4.339 ; 4.339 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[31] ; PTM1_CLK125 ; 4.039 ; 4.039 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TENB[*]   ; PTM1_CLK125 ; 3.809 ; 3.809 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[0]  ; PTM1_CLK125 ; 5.001 ; 5.001 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[1]  ; PTM1_CLK125 ; 4.781 ; 4.781 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[2]  ; PTM1_CLK125 ; 3.809 ; 3.809 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[3]  ; PTM1_CLK125 ; 4.610 ; 4.610 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TEOP[*]   ; PTM1_CLK125 ; 4.088 ; 4.088 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[0]  ; PTM1_CLK125 ; 5.341 ; 5.341 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[1]  ; PTM1_CLK125 ; 4.926 ; 4.926 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[2]  ; PTM1_CLK125 ; 4.088 ; 4.088 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[3]  ; PTM1_CLK125 ; 4.371 ; 4.371 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TERR[*]   ; PTM1_CLK125 ; 4.131 ; 4.131 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[0]  ; PTM1_CLK125 ; 5.025 ; 5.025 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[1]  ; PTM1_CLK125 ; 4.968 ; 4.968 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[2]  ; PTM1_CLK125 ; 4.131 ; 4.131 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[3]  ; PTM1_CLK125 ; 4.354 ; 4.354 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TFCLK     ; PTM1_CLK125 ; 2.639 ; 2.639 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TSOP[*]   ; PTM1_CLK125 ; 4.146 ; 4.146 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[0]  ; PTM1_CLK125 ; 5.604 ; 5.604 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[1]  ; PTM1_CLK125 ; 5.208 ; 5.208 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[2]  ; PTM1_CLK125 ; 4.146 ; 4.146 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[3]  ; PTM1_CLK125 ; 4.218 ; 4.218 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RFCLK     ; PTM1_CLK125 ; 4.955 ; 4.955 ; Fall       ; PTM1_CLK125     ;
+; PTM1_MAC1_TFCLK     ; PTM1_CLK125 ; 2.639 ; 2.639 ; Fall       ; PTM1_CLK125     ;
++---------------------+-------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------+
+; Propagation Delay                                    ;
++------------+---------------+-------+----+----+-------+
+; Input Port ; Output Port   ; RR    ; RF ; FR ; FF    ;
++------------+---------------+-------+----+----+-------+
+; HRESET     ; PTM1_MAC1_RST ; 6.659 ;    ;    ; 6.659 ;
+; SRESET     ; PTM1_MAC1_RST ; 6.649 ;    ;    ; 6.649 ;
++------------+---------------+-------+----+----+-------+
+
+
++------------------------------------------------------+
+; Minimum Propagation Delay                            ;
++------------+---------------+-------+----+----+-------+
+; Input Port ; Output Port   ; RR    ; RF ; FR ; FF    ;
++------------+---------------+-------+----+----+-------+
+; HRESET     ; PTM1_MAC1_RST ; 6.659 ;    ;    ; 6.659 ;
+; SRESET     ; PTM1_MAC1_RST ; 6.649 ;    ;    ; 6.649 ;
++------------+---------------+-------+----+----+-------+
+
+
++--------------------------------------------------------------------------------+
+; Output Enable Times                                                            ;
++--------------------+-------------+-------+------+------------+-----------------+
+; Data Port          ; Clock Port  ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++--------------------+-------------+-------+------+------------+-----------------+
+; CPU_PORTX_DAT[*]   ; PTM1_CLK125 ; 3.513 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]  ; PTM1_CLK125 ; 3.513 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]  ; PTM1_CLK125 ; 3.665 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]  ; PTM1_CLK125 ; 3.872 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]  ; PTM1_CLK125 ; 3.797 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]  ; PTM1_CLK125 ; 3.899 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]  ; PTM1_CLK125 ; 3.825 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]  ; PTM1_CLK125 ; 3.813 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]  ; PTM1_CLK125 ; 3.712 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]  ; PTM1_CLK125 ; 3.646 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]  ; PTM1_CLK125 ; 3.682 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10] ; PTM1_CLK125 ; 3.794 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11] ; PTM1_CLK125 ; 3.794 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12] ; PTM1_CLK125 ; 3.660 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13] ; PTM1_CLK125 ; 3.939 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14] ; PTM1_CLK125 ; 3.870 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15] ; PTM1_CLK125 ; 3.819 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16] ; PTM1_CLK125 ; 4.178 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17] ; PTM1_CLK125 ; 4.158 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18] ; PTM1_CLK125 ; 3.989 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19] ; PTM1_CLK125 ; 4.042 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20] ; PTM1_CLK125 ; 4.061 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21] ; PTM1_CLK125 ; 4.029 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22] ; PTM1_CLK125 ; 4.094 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23] ; PTM1_CLK125 ; 4.040 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24] ; PTM1_CLK125 ; 4.056 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25] ; PTM1_CLK125 ; 4.094 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26] ; PTM1_CLK125 ; 4.151 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27] ; PTM1_CLK125 ; 4.089 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28] ; PTM1_CLK125 ; 4.103 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29] ; PTM1_CLK125 ; 4.113 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30] ; PTM1_CLK125 ; 4.347 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31] ; PTM1_CLK125 ; 4.314 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32] ; PTM1_CLK125 ; 4.332 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33] ; PTM1_CLK125 ; 4.426 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34] ; PTM1_CLK125 ; 4.463 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35] ; PTM1_CLK125 ; 4.483 ;      ; Rise       ; PTM1_CLK125     ;
++--------------------+-------------+-------+------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Minimum Output Enable Times                                                    ;
++--------------------+-------------+-------+------+------------+-----------------+
+; Data Port          ; Clock Port  ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++--------------------+-------------+-------+------+------------+-----------------+
+; CPU_PORTX_DAT[*]   ; PTM1_CLK125 ; 3.513 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]  ; PTM1_CLK125 ; 3.513 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]  ; PTM1_CLK125 ; 3.665 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]  ; PTM1_CLK125 ; 3.872 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]  ; PTM1_CLK125 ; 3.797 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]  ; PTM1_CLK125 ; 3.899 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]  ; PTM1_CLK125 ; 3.825 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]  ; PTM1_CLK125 ; 3.813 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]  ; PTM1_CLK125 ; 3.712 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]  ; PTM1_CLK125 ; 3.646 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]  ; PTM1_CLK125 ; 3.682 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10] ; PTM1_CLK125 ; 3.794 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11] ; PTM1_CLK125 ; 3.794 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12] ; PTM1_CLK125 ; 3.660 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13] ; PTM1_CLK125 ; 3.939 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14] ; PTM1_CLK125 ; 3.870 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15] ; PTM1_CLK125 ; 3.819 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16] ; PTM1_CLK125 ; 4.178 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17] ; PTM1_CLK125 ; 4.158 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18] ; PTM1_CLK125 ; 3.989 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19] ; PTM1_CLK125 ; 4.042 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20] ; PTM1_CLK125 ; 4.061 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21] ; PTM1_CLK125 ; 4.029 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22] ; PTM1_CLK125 ; 4.094 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23] ; PTM1_CLK125 ; 4.040 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24] ; PTM1_CLK125 ; 4.056 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25] ; PTM1_CLK125 ; 4.094 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26] ; PTM1_CLK125 ; 4.151 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27] ; PTM1_CLK125 ; 4.089 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28] ; PTM1_CLK125 ; 4.103 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29] ; PTM1_CLK125 ; 4.113 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30] ; PTM1_CLK125 ; 4.347 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31] ; PTM1_CLK125 ; 4.314 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32] ; PTM1_CLK125 ; 4.332 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33] ; PTM1_CLK125 ; 4.426 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34] ; PTM1_CLK125 ; 4.463 ;      ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35] ; PTM1_CLK125 ; 4.483 ;      ; Rise       ; PTM1_CLK125     ;
++--------------------+-------------+-------+------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Output Disable Times                                                                    ;
++--------------------+-------------+-----------+-----------+------------+-----------------+
+; Data Port          ; Clock Port  ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++--------------------+-------------+-----------+-----------+------------+-----------------+
+; CPU_PORTX_DAT[*]   ; PTM1_CLK125 ; 3.513     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]  ; PTM1_CLK125 ; 3.513     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]  ; PTM1_CLK125 ; 3.665     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]  ; PTM1_CLK125 ; 3.872     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]  ; PTM1_CLK125 ; 3.797     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]  ; PTM1_CLK125 ; 3.899     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]  ; PTM1_CLK125 ; 3.825     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]  ; PTM1_CLK125 ; 3.813     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]  ; PTM1_CLK125 ; 3.712     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]  ; PTM1_CLK125 ; 3.646     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]  ; PTM1_CLK125 ; 3.682     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10] ; PTM1_CLK125 ; 3.794     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11] ; PTM1_CLK125 ; 3.794     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12] ; PTM1_CLK125 ; 3.660     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13] ; PTM1_CLK125 ; 3.939     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14] ; PTM1_CLK125 ; 3.870     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15] ; PTM1_CLK125 ; 3.819     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16] ; PTM1_CLK125 ; 4.178     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17] ; PTM1_CLK125 ; 4.158     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18] ; PTM1_CLK125 ; 3.989     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19] ; PTM1_CLK125 ; 4.042     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20] ; PTM1_CLK125 ; 4.061     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21] ; PTM1_CLK125 ; 4.029     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22] ; PTM1_CLK125 ; 4.094     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23] ; PTM1_CLK125 ; 4.040     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24] ; PTM1_CLK125 ; 4.056     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25] ; PTM1_CLK125 ; 4.094     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26] ; PTM1_CLK125 ; 4.151     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27] ; PTM1_CLK125 ; 4.089     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28] ; PTM1_CLK125 ; 4.103     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29] ; PTM1_CLK125 ; 4.113     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30] ; PTM1_CLK125 ; 4.347     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31] ; PTM1_CLK125 ; 4.314     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32] ; PTM1_CLK125 ; 4.332     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33] ; PTM1_CLK125 ; 4.426     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34] ; PTM1_CLK125 ; 4.463     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35] ; PTM1_CLK125 ; 4.483     ;           ; Rise       ; PTM1_CLK125     ;
++--------------------+-------------+-----------+-----------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                            ;
++--------------------+-------------+-----------+-----------+------------+-----------------+
+; Data Port          ; Clock Port  ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++--------------------+-------------+-----------+-----------+------------+-----------------+
+; CPU_PORTX_DAT[*]   ; PTM1_CLK125 ; 3.513     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]  ; PTM1_CLK125 ; 3.513     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]  ; PTM1_CLK125 ; 3.665     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]  ; PTM1_CLK125 ; 3.872     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]  ; PTM1_CLK125 ; 3.797     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]  ; PTM1_CLK125 ; 3.899     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]  ; PTM1_CLK125 ; 3.825     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]  ; PTM1_CLK125 ; 3.813     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]  ; PTM1_CLK125 ; 3.712     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]  ; PTM1_CLK125 ; 3.646     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]  ; PTM1_CLK125 ; 3.682     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10] ; PTM1_CLK125 ; 3.794     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11] ; PTM1_CLK125 ; 3.794     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12] ; PTM1_CLK125 ; 3.660     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13] ; PTM1_CLK125 ; 3.939     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14] ; PTM1_CLK125 ; 3.870     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15] ; PTM1_CLK125 ; 3.819     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16] ; PTM1_CLK125 ; 4.178     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17] ; PTM1_CLK125 ; 4.158     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18] ; PTM1_CLK125 ; 3.989     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19] ; PTM1_CLK125 ; 4.042     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20] ; PTM1_CLK125 ; 4.061     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21] ; PTM1_CLK125 ; 4.029     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22] ; PTM1_CLK125 ; 4.094     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23] ; PTM1_CLK125 ; 4.040     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24] ; PTM1_CLK125 ; 4.056     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25] ; PTM1_CLK125 ; 4.094     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26] ; PTM1_CLK125 ; 4.151     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27] ; PTM1_CLK125 ; 4.089     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28] ; PTM1_CLK125 ; 4.103     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29] ; PTM1_CLK125 ; 4.113     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30] ; PTM1_CLK125 ; 4.347     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31] ; PTM1_CLK125 ; 4.314     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32] ; PTM1_CLK125 ; 4.332     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33] ; PTM1_CLK125 ; 4.426     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34] ; PTM1_CLK125 ; 4.463     ;           ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35] ; PTM1_CLK125 ; 4.483     ;           ; Rise       ; PTM1_CLK125     ;
++--------------------+-------------+-----------+-----------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                               ;
++------------------+------------+-------+-----------+---------+---------------------+
+; Clock            ; Setup      ; Hold  ; Recovery  ; Removal ; Minimum Pulse Width ;
++------------------+------------+-------+-----------+---------+---------------------+
+; Worst-case Slack ; -6.137     ; 0.216 ; -4.152    ; 2.249   ; -1.500              ;
+;  PTM1_CLK125     ; -6.137     ; 0.216 ; -4.152    ; 2.249   ; -1.500              ;
+; Design-wide TNS  ; -35595.803 ; 0.0   ; -9022.296 ; 0.0     ; -16140.04           ;
+;  PTM1_CLK125     ; -35595.803 ; 0.000 ; -9022.296 ; 0.000   ; -16140.040          ;
++------------------+------------+-------+-----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------+
+; Setup Times                                                                        ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; Data Port           ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; CPU_PORTX_A[*]      ; PTM1_CLK125 ; 13.733 ; 13.733 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[0]     ; PTM1_CLK125 ; 13.163 ; 13.163 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[1]     ; PTM1_CLK125 ; 13.733 ; 13.733 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[2]     ; PTM1_CLK125 ; 12.498 ; 12.498 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[3]     ; PTM1_CLK125 ; 12.514 ; 12.514 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[4]     ; PTM1_CLK125 ; 13.340 ; 13.340 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[5]     ; PTM1_CLK125 ; 12.105 ; 12.105 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[6]     ; PTM1_CLK125 ; 13.527 ; 13.527 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[7]     ; PTM1_CLK125 ; 13.187 ; 13.187 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[8]     ; PTM1_CLK125 ; 13.296 ; 13.296 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[9]     ; PTM1_CLK125 ; 13.351 ; 13.351 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[10]    ; PTM1_CLK125 ; 13.542 ; 13.542 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[11]    ; PTM1_CLK125 ; 12.007 ; 12.007 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[12]    ; PTM1_CLK125 ; 12.586 ; 12.586 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[13]    ; PTM1_CLK125 ; 12.809 ; 12.809 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[14]    ; PTM1_CLK125 ; 12.670 ; 12.670 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[15]    ; PTM1_CLK125 ; 12.305 ; 12.305 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[16]    ; PTM1_CLK125 ; 12.349 ; 12.349 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[17]    ; PTM1_CLK125 ; 12.905 ; 12.905 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[18]    ; PTM1_CLK125 ; 12.289 ; 12.289 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[19]    ; PTM1_CLK125 ; 12.308 ; 12.308 ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_DAT[*]    ; PTM1_CLK125 ; 6.395  ; 6.395  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]   ; PTM1_CLK125 ; 4.594  ; 4.594  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]   ; PTM1_CLK125 ; 4.243  ; 4.243  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]   ; PTM1_CLK125 ; 4.759  ; 4.759  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]   ; PTM1_CLK125 ; 4.354  ; 4.354  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]   ; PTM1_CLK125 ; 4.564  ; 4.564  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]   ; PTM1_CLK125 ; 4.486  ; 4.486  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]   ; PTM1_CLK125 ; 4.966  ; 4.966  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]   ; PTM1_CLK125 ; 4.692  ; 4.692  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]   ; PTM1_CLK125 ; 5.762  ; 5.762  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]   ; PTM1_CLK125 ; 5.573  ; 5.573  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10]  ; PTM1_CLK125 ; 5.228  ; 5.228  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11]  ; PTM1_CLK125 ; 6.395  ; 6.395  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12]  ; PTM1_CLK125 ; 5.279  ; 5.279  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13]  ; PTM1_CLK125 ; 6.016  ; 6.016  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14]  ; PTM1_CLK125 ; 5.600  ; 5.600  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15]  ; PTM1_CLK125 ; 5.370  ; 5.370  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16]  ; PTM1_CLK125 ; 5.737  ; 5.737  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17]  ; PTM1_CLK125 ; 4.934  ; 4.934  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18]  ; PTM1_CLK125 ; 6.023  ; 6.023  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19]  ; PTM1_CLK125 ; 5.365  ; 5.365  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20]  ; PTM1_CLK125 ; 5.726  ; 5.726  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21]  ; PTM1_CLK125 ; 5.245  ; 5.245  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22]  ; PTM1_CLK125 ; 5.278  ; 5.278  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23]  ; PTM1_CLK125 ; 5.526  ; 5.526  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24]  ; PTM1_CLK125 ; 4.981  ; 4.981  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25]  ; PTM1_CLK125 ; 5.408  ; 5.408  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26]  ; PTM1_CLK125 ; 5.650  ; 5.650  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27]  ; PTM1_CLK125 ; 4.912  ; 4.912  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28]  ; PTM1_CLK125 ; 5.669  ; 5.669  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29]  ; PTM1_CLK125 ; 4.942  ; 4.942  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30]  ; PTM1_CLK125 ; 5.491  ; 5.491  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31]  ; PTM1_CLK125 ; 5.049  ; 5.049  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32]  ; PTM1_CLK125 ; 5.022  ; 5.022  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33]  ; PTM1_CLK125 ; 4.524  ; 4.524  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34]  ; PTM1_CLK125 ; 4.938  ; 4.938  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35]  ; PTM1_CLK125 ; 5.225  ; 5.225  ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_OE        ; PTM1_CLK125 ; 4.822  ; 4.822  ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_WE        ; PTM1_CLK125 ; 5.167  ; 5.167  ; Rise       ; PTM1_CLK125     ;
+; CPU_PTM1_CS         ; PTM1_CLK125 ; 7.350  ; 7.350  ; Rise       ; PTM1_CLK125     ;
+; HRESET              ; PTM1_CLK125 ; 11.138 ; 11.138 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RDAT[*]   ; PTM1_CLK125 ; 6.305  ; 6.305  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[0]  ; PTM1_CLK125 ; 6.164  ; 6.164  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[1]  ; PTM1_CLK125 ; 6.230  ; 6.230  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[2]  ; PTM1_CLK125 ; 6.074  ; 6.074  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[3]  ; PTM1_CLK125 ; 6.099  ; 6.099  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[4]  ; PTM1_CLK125 ; 6.275  ; 6.275  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[5]  ; PTM1_CLK125 ; 6.305  ; 6.305  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[6]  ; PTM1_CLK125 ; 6.231  ; 6.231  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[7]  ; PTM1_CLK125 ; 6.218  ; 6.218  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[8]  ; PTM1_CLK125 ; 4.886  ; 4.886  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[9]  ; PTM1_CLK125 ; 4.578  ; 4.578  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[10] ; PTM1_CLK125 ; 4.644  ; 4.644  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[11] ; PTM1_CLK125 ; 4.418  ; 4.418  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[12] ; PTM1_CLK125 ; 4.734  ; 4.734  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[13] ; PTM1_CLK125 ; 4.746  ; 4.746  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[14] ; PTM1_CLK125 ; 4.600  ; 4.600  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[15] ; PTM1_CLK125 ; 4.655  ; 4.655  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[16] ; PTM1_CLK125 ; 6.037  ; 6.037  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[17] ; PTM1_CLK125 ; 5.826  ; 5.826  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[18] ; PTM1_CLK125 ; 5.255  ; 5.255  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[19] ; PTM1_CLK125 ; 5.626  ; 5.626  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[20] ; PTM1_CLK125 ; 5.323  ; 5.323  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[21] ; PTM1_CLK125 ; 5.245  ; 5.245  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[22] ; PTM1_CLK125 ; 4.928  ; 4.928  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[23] ; PTM1_CLK125 ; 5.293  ; 5.293  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[24] ; PTM1_CLK125 ; 5.884  ; 5.884  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[25] ; PTM1_CLK125 ; 5.771  ; 5.771  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[26] ; PTM1_CLK125 ; 5.046  ; 5.046  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[27] ; PTM1_CLK125 ; 5.397  ; 5.397  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[28] ; PTM1_CLK125 ; 5.915  ; 5.915  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[29] ; PTM1_CLK125 ; 5.419  ; 5.419  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[30] ; PTM1_CLK125 ; 5.340  ; 5.340  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[31] ; PTM1_CLK125 ; 5.761  ; 5.761  ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_REOP[*]   ; PTM1_CLK125 ; 10.053 ; 10.053 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[0]  ; PTM1_CLK125 ; 10.053 ; 10.053 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[1]  ; PTM1_CLK125 ; 7.731  ; 7.731  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[2]  ; PTM1_CLK125 ; 8.676  ; 8.676  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[3]  ; PTM1_CLK125 ; 8.805  ; 8.805  ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RERR[*]   ; PTM1_CLK125 ; 4.678  ; 4.678  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[0]  ; PTM1_CLK125 ; 4.678  ; 4.678  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[1]  ; PTM1_CLK125 ; 3.073  ; 3.073  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[2]  ; PTM1_CLK125 ; 4.149  ; 4.149  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[3]  ; PTM1_CLK125 ; 3.830  ; 3.830  ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RSOP[*]   ; PTM1_CLK125 ; 6.788  ; 6.788  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[0]  ; PTM1_CLK125 ; 6.788  ; 6.788  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[1]  ; PTM1_CLK125 ; 4.732  ; 4.732  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[2]  ; PTM1_CLK125 ; 6.302  ; 6.302  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[3]  ; PTM1_CLK125 ; 5.583  ; 5.583  ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RVAL[*]   ; PTM1_CLK125 ; 7.540  ; 7.540  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[0]  ; PTM1_CLK125 ; 7.540  ; 7.540  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[1]  ; PTM1_CLK125 ; 6.163  ; 6.163  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[2]  ; PTM1_CLK125 ; 6.489  ; 6.489  ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[3]  ; PTM1_CLK125 ; 6.450  ; 6.450  ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_DTPA[*]   ; PTM1_CLK125 ; 5.545  ; 5.545  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[0]  ; PTM1_CLK125 ; 5.545  ; 5.545  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[1]  ; PTM1_CLK125 ; 5.106  ; 5.106  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[2]  ; PTM1_CLK125 ; 4.522  ; 4.522  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[3]  ; PTM1_CLK125 ; 4.758  ; 4.758  ; Rise       ; PTM1_CLK125     ;
+; SRESET              ; PTM1_CLK125 ; 9.021  ; 9.021  ; Rise       ; PTM1_CLK125     ;
++---------------------+-------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------+
+; Hold Times                                                                         ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; Data Port           ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; CPU_PORTX_A[*]      ; PTM1_CLK125 ; -2.147 ; -2.147 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[0]     ; PTM1_CLK125 ; -2.349 ; -2.349 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[1]     ; PTM1_CLK125 ; -2.385 ; -2.385 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[2]     ; PTM1_CLK125 ; -2.214 ; -2.214 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[3]     ; PTM1_CLK125 ; -2.453 ; -2.453 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[4]     ; PTM1_CLK125 ; -2.741 ; -2.741 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[5]     ; PTM1_CLK125 ; -2.147 ; -2.147 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[6]     ; PTM1_CLK125 ; -2.787 ; -2.787 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[7]     ; PTM1_CLK125 ; -2.662 ; -2.662 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[8]     ; PTM1_CLK125 ; -2.676 ; -2.676 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[9]     ; PTM1_CLK125 ; -2.692 ; -2.692 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[10]    ; PTM1_CLK125 ; -2.800 ; -2.800 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[11]    ; PTM1_CLK125 ; -2.249 ; -2.249 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[12]    ; PTM1_CLK125 ; -2.453 ; -2.453 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[13]    ; PTM1_CLK125 ; -2.596 ; -2.596 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[14]    ; PTM1_CLK125 ; -2.457 ; -2.457 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[15]    ; PTM1_CLK125 ; -2.346 ; -2.346 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[16]    ; PTM1_CLK125 ; -2.363 ; -2.363 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[17]    ; PTM1_CLK125 ; -2.532 ; -2.532 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[18]    ; PTM1_CLK125 ; -2.315 ; -2.315 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_A[19]    ; PTM1_CLK125 ; -2.298 ; -2.298 ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_DAT[*]    ; PTM1_CLK125 ; -1.395 ; -1.395 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]   ; PTM1_CLK125 ; -1.513 ; -1.513 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]   ; PTM1_CLK125 ; -1.395 ; -1.395 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]   ; PTM1_CLK125 ; -1.594 ; -1.594 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]   ; PTM1_CLK125 ; -1.470 ; -1.470 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]   ; PTM1_CLK125 ; -1.680 ; -1.680 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]   ; PTM1_CLK125 ; -1.576 ; -1.576 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]   ; PTM1_CLK125 ; -1.576 ; -1.576 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]   ; PTM1_CLK125 ; -1.649 ; -1.649 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]   ; PTM1_CLK125 ; -1.705 ; -1.705 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]   ; PTM1_CLK125 ; -1.529 ; -1.529 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10]  ; PTM1_CLK125 ; -1.706 ; -1.706 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11]  ; PTM1_CLK125 ; -1.835 ; -1.835 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12]  ; PTM1_CLK125 ; -1.836 ; -1.836 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13]  ; PTM1_CLK125 ; -1.825 ; -1.825 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14]  ; PTM1_CLK125 ; -1.752 ; -1.752 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15]  ; PTM1_CLK125 ; -1.779 ; -1.779 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16]  ; PTM1_CLK125 ; -1.783 ; -1.783 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17]  ; PTM1_CLK125 ; -1.923 ; -1.923 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18]  ; PTM1_CLK125 ; -2.031 ; -2.031 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19]  ; PTM1_CLK125 ; -1.801 ; -1.801 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20]  ; PTM1_CLK125 ; -1.797 ; -1.797 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21]  ; PTM1_CLK125 ; -1.907 ; -1.907 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22]  ; PTM1_CLK125 ; -1.832 ; -1.832 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23]  ; PTM1_CLK125 ; -1.791 ; -1.791 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24]  ; PTM1_CLK125 ; -2.029 ; -2.029 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25]  ; PTM1_CLK125 ; -1.763 ; -1.763 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26]  ; PTM1_CLK125 ; -2.052 ; -2.052 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27]  ; PTM1_CLK125 ; -1.860 ; -1.860 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28]  ; PTM1_CLK125 ; -1.810 ; -1.810 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29]  ; PTM1_CLK125 ; -1.684 ; -1.684 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30]  ; PTM1_CLK125 ; -1.862 ; -1.862 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31]  ; PTM1_CLK125 ; -1.833 ; -1.833 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32]  ; PTM1_CLK125 ; -2.010 ; -2.010 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33]  ; PTM1_CLK125 ; -1.882 ; -1.882 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34]  ; PTM1_CLK125 ; -2.116 ; -2.116 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35]  ; PTM1_CLK125 ; -1.975 ; -1.975 ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_OE        ; PTM1_CLK125 ; -1.861 ; -1.861 ; Rise       ; PTM1_CLK125     ;
+; CPU_PORTX_WE        ; PTM1_CLK125 ; -2.203 ; -2.203 ; Rise       ; PTM1_CLK125     ;
+; CPU_PTM1_CS         ; PTM1_CLK125 ; -2.114 ; -2.114 ; Rise       ; PTM1_CLK125     ;
+; HRESET              ; PTM1_CLK125 ; -1.464 ; -1.464 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RDAT[*]   ; PTM1_CLK125 ; -1.292 ; -1.292 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[0]  ; PTM1_CLK125 ; -2.199 ; -2.199 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[1]  ; PTM1_CLK125 ; -1.985 ; -1.985 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[2]  ; PTM1_CLK125 ; -2.174 ; -2.174 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[3]  ; PTM1_CLK125 ; -2.147 ; -2.147 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[4]  ; PTM1_CLK125 ; -2.128 ; -2.128 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[5]  ; PTM1_CLK125 ; -2.320 ; -2.320 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[6]  ; PTM1_CLK125 ; -2.476 ; -2.476 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[7]  ; PTM1_CLK125 ; -2.424 ; -2.424 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[8]  ; PTM1_CLK125 ; -1.684 ; -1.684 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[9]  ; PTM1_CLK125 ; -1.692 ; -1.692 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[10] ; PTM1_CLK125 ; -1.692 ; -1.692 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[11] ; PTM1_CLK125 ; -1.366 ; -1.366 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[12] ; PTM1_CLK125 ; -1.601 ; -1.601 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[13] ; PTM1_CLK125 ; -1.622 ; -1.622 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[14] ; PTM1_CLK125 ; -1.629 ; -1.629 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[15] ; PTM1_CLK125 ; -1.292 ; -1.292 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[16] ; PTM1_CLK125 ; -2.142 ; -2.142 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[17] ; PTM1_CLK125 ; -2.041 ; -2.041 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[18] ; PTM1_CLK125 ; -2.126 ; -2.126 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[19] ; PTM1_CLK125 ; -2.136 ; -2.136 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[20] ; PTM1_CLK125 ; -2.021 ; -2.021 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[21] ; PTM1_CLK125 ; -2.037 ; -2.037 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[22] ; PTM1_CLK125 ; -2.047 ; -2.047 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[23] ; PTM1_CLK125 ; -1.860 ; -1.860 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[24] ; PTM1_CLK125 ; -1.596 ; -1.596 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[25] ; PTM1_CLK125 ; -1.532 ; -1.532 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[26] ; PTM1_CLK125 ; -1.566 ; -1.566 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[27] ; PTM1_CLK125 ; -1.667 ; -1.667 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[28] ; PTM1_CLK125 ; -1.817 ; -1.817 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[29] ; PTM1_CLK125 ; -1.796 ; -1.796 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[30] ; PTM1_CLK125 ; -1.605 ; -1.605 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RDAT[31] ; PTM1_CLK125 ; -1.776 ; -1.776 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_REOP[*]   ; PTM1_CLK125 ; -1.386 ; -1.386 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[0]  ; PTM1_CLK125 ; -2.052 ; -2.052 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[1]  ; PTM1_CLK125 ; -1.386 ; -1.386 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[2]  ; PTM1_CLK125 ; -1.888 ; -1.888 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_REOP[3]  ; PTM1_CLK125 ; -1.650 ; -1.650 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RERR[*]   ; PTM1_CLK125 ; -1.245 ; -1.245 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[0]  ; PTM1_CLK125 ; -2.109 ; -2.109 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[1]  ; PTM1_CLK125 ; -1.245 ; -1.245 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[2]  ; PTM1_CLK125 ; -1.714 ; -1.714 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RERR[3]  ; PTM1_CLK125 ; -1.512 ; -1.512 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RSOP[*]   ; PTM1_CLK125 ; -1.403 ; -1.403 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[0]  ; PTM1_CLK125 ; -2.177 ; -2.177 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[1]  ; PTM1_CLK125 ; -1.403 ; -1.403 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[2]  ; PTM1_CLK125 ; -1.870 ; -1.870 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RSOP[3]  ; PTM1_CLK125 ; -1.692 ; -1.692 ; Rise       ; PTM1_CLK125     ;
+; MAC1_PTM1_RVAL[*]   ; PTM1_CLK125 ; -1.406 ; -1.406 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[0]  ; PTM1_CLK125 ; -1.993 ; -1.993 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[1]  ; PTM1_CLK125 ; -1.479 ; -1.479 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[2]  ; PTM1_CLK125 ; -1.474 ; -1.474 ; Rise       ; PTM1_CLK125     ;
+;  MAC1_PTM1_RVAL[3]  ; PTM1_CLK125 ; -1.406 ; -1.406 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_DTPA[*]   ; PTM1_CLK125 ; -1.895 ; -1.895 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[0]  ; PTM1_CLK125 ; -2.609 ; -2.609 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[1]  ; PTM1_CLK125 ; -2.276 ; -2.276 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[2]  ; PTM1_CLK125 ; -1.895 ; -1.895 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_DTPA[3]  ; PTM1_CLK125 ; -2.108 ; -2.108 ; Rise       ; PTM1_CLK125     ;
+; SRESET              ; PTM1_CLK125 ; -1.561 ; -1.561 ; Rise       ; PTM1_CLK125     ;
++---------------------+-------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------+
+; Clock to Output Times                                                              ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; Data Port           ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------------+-------------+--------+--------+------------+-----------------+
+; CPU_PORTX_DAT[*]    ; PTM1_CLK125 ; 11.033 ; 11.033 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]   ; PTM1_CLK125 ; 8.928  ; 8.928  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]   ; PTM1_CLK125 ; 8.837  ; 8.837  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]   ; PTM1_CLK125 ; 9.135  ; 9.135  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]   ; PTM1_CLK125 ; 9.214  ; 9.214  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]   ; PTM1_CLK125 ; 9.274  ; 9.274  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]   ; PTM1_CLK125 ; 9.724  ; 9.724  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]   ; PTM1_CLK125 ; 9.708  ; 9.708  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]   ; PTM1_CLK125 ; 8.843  ; 8.843  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]   ; PTM1_CLK125 ; 8.166  ; 8.166  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]   ; PTM1_CLK125 ; 8.894  ; 8.894  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10]  ; PTM1_CLK125 ; 9.453  ; 9.453  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11]  ; PTM1_CLK125 ; 9.712  ; 9.712  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12]  ; PTM1_CLK125 ; 9.944  ; 9.944  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13]  ; PTM1_CLK125 ; 9.724  ; 9.724  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14]  ; PTM1_CLK125 ; 9.323  ; 9.323  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15]  ; PTM1_CLK125 ; 9.563  ; 9.563  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16]  ; PTM1_CLK125 ; 10.043 ; 10.043 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17]  ; PTM1_CLK125 ; 10.043 ; 10.043 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18]  ; PTM1_CLK125 ; 9.633  ; 9.633  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19]  ; PTM1_CLK125 ; 10.451 ; 10.451 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20]  ; PTM1_CLK125 ; 10.094 ; 10.094 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21]  ; PTM1_CLK125 ; 10.146 ; 10.146 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22]  ; PTM1_CLK125 ; 9.951  ; 9.951  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23]  ; PTM1_CLK125 ; 10.354 ; 10.354 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24]  ; PTM1_CLK125 ; 10.143 ; 10.143 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25]  ; PTM1_CLK125 ; 10.096 ; 10.096 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26]  ; PTM1_CLK125 ; 10.256 ; 10.256 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27]  ; PTM1_CLK125 ; 10.483 ; 10.483 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28]  ; PTM1_CLK125 ; 9.858  ; 9.858  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29]  ; PTM1_CLK125 ; 10.953 ; 10.953 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30]  ; PTM1_CLK125 ; 10.458 ; 10.458 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31]  ; PTM1_CLK125 ; 10.626 ; 10.626 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32]  ; PTM1_CLK125 ; 9.937  ; 9.937  ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33]  ; PTM1_CLK125 ; 10.773 ; 10.773 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34]  ; PTM1_CLK125 ; 10.833 ; 10.833 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35]  ; PTM1_CLK125 ; 11.033 ; 11.033 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RFCLK     ; PTM1_CLK125 ; 10.580 ; 10.580 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RST       ; PTM1_CLK125 ; 11.072 ; 11.072 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TDAT[*]   ; PTM1_CLK125 ; 13.696 ; 13.696 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[0]  ; PTM1_CLK125 ; 11.211 ; 11.211 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[1]  ; PTM1_CLK125 ; 12.884 ; 12.884 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[2]  ; PTM1_CLK125 ; 13.158 ; 13.158 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[3]  ; PTM1_CLK125 ; 12.542 ; 12.542 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[4]  ; PTM1_CLK125 ; 13.696 ; 13.696 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[5]  ; PTM1_CLK125 ; 11.866 ; 11.866 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[6]  ; PTM1_CLK125 ; 12.894 ; 12.894 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[7]  ; PTM1_CLK125 ; 12.267 ; 12.267 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[8]  ; PTM1_CLK125 ; 12.722 ; 12.722 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[9]  ; PTM1_CLK125 ; 12.602 ; 12.602 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[10] ; PTM1_CLK125 ; 10.632 ; 10.632 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[11] ; PTM1_CLK125 ; 11.191 ; 11.191 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[12] ; PTM1_CLK125 ; 10.544 ; 10.544 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[13] ; PTM1_CLK125 ; 10.251 ; 10.251 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[14] ; PTM1_CLK125 ; 9.839  ; 9.839  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[15] ; PTM1_CLK125 ; 12.899 ; 12.899 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[16] ; PTM1_CLK125 ; 9.708  ; 9.708  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[17] ; PTM1_CLK125 ; 9.733  ; 9.733  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[18] ; PTM1_CLK125 ; 8.534  ; 8.534  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[19] ; PTM1_CLK125 ; 8.823  ; 8.823  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[20] ; PTM1_CLK125 ; 9.405  ; 9.405  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[21] ; PTM1_CLK125 ; 9.698  ; 9.698  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[22] ; PTM1_CLK125 ; 9.240  ; 9.240  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[23] ; PTM1_CLK125 ; 9.442  ; 9.442  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[24] ; PTM1_CLK125 ; 10.174 ; 10.174 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[25] ; PTM1_CLK125 ; 9.779  ; 9.779  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[26] ; PTM1_CLK125 ; 9.878  ; 9.878  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[27] ; PTM1_CLK125 ; 10.104 ; 10.104 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[28] ; PTM1_CLK125 ; 10.103 ; 10.103 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[29] ; PTM1_CLK125 ; 9.926  ; 9.926  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[30] ; PTM1_CLK125 ; 10.209 ; 10.209 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[31] ; PTM1_CLK125 ; 9.404  ; 9.404  ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TENB[*]   ; PTM1_CLK125 ; 11.055 ; 11.055 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[0]  ; PTM1_CLK125 ; 10.830 ; 10.830 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[1]  ; PTM1_CLK125 ; 10.773 ; 10.773 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[2]  ; PTM1_CLK125 ; 8.476  ; 8.476  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[3]  ; PTM1_CLK125 ; 11.055 ; 11.055 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TEOP[*]   ; PTM1_CLK125 ; 11.277 ; 11.277 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[0]  ; PTM1_CLK125 ; 11.277 ; 11.277 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[1]  ; PTM1_CLK125 ; 10.434 ; 10.434 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[2]  ; PTM1_CLK125 ; 9.100  ; 9.100  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[3]  ; PTM1_CLK125 ; 10.296 ; 10.296 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TERR[*]   ; PTM1_CLK125 ; 11.984 ; 11.984 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[0]  ; PTM1_CLK125 ; 11.332 ; 11.332 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[1]  ; PTM1_CLK125 ; 11.984 ; 11.984 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[2]  ; PTM1_CLK125 ; 9.684  ; 9.684  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[3]  ; PTM1_CLK125 ; 10.318 ; 10.318 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TFCLK     ; PTM1_CLK125 ; 5.894  ; 5.894  ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TSOP[*]   ; PTM1_CLK125 ; 13.670 ; 13.670 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[0]  ; PTM1_CLK125 ; 13.670 ; 13.670 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[1]  ; PTM1_CLK125 ; 12.603 ; 12.603 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[2]  ; PTM1_CLK125 ; 9.397  ; 9.397  ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[3]  ; PTM1_CLK125 ; 9.666  ; 9.666  ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RFCLK     ; PTM1_CLK125 ; 10.580 ; 10.580 ; Fall       ; PTM1_CLK125     ;
+; PTM1_MAC1_TFCLK     ; PTM1_CLK125 ; 5.894  ; 5.894  ; Fall       ; PTM1_CLK125     ;
++---------------------+-------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++---------------------+-------------+-------+-------+------------+-----------------+
+; Data Port           ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------------+-------------+-------+-------+------------+-----------------+
+; CPU_PORTX_DAT[*]    ; PTM1_CLK125 ; 3.704 ; 3.704 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[0]   ; PTM1_CLK125 ; 3.871 ; 3.871 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[1]   ; PTM1_CLK125 ; 3.815 ; 3.815 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[2]   ; PTM1_CLK125 ; 3.958 ; 3.958 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[3]   ; PTM1_CLK125 ; 3.988 ; 3.988 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[4]   ; PTM1_CLK125 ; 4.011 ; 4.011 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[5]   ; PTM1_CLK125 ; 4.162 ; 4.162 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[6]   ; PTM1_CLK125 ; 4.145 ; 4.145 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[7]   ; PTM1_CLK125 ; 3.828 ; 3.828 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[8]   ; PTM1_CLK125 ; 3.704 ; 3.704 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[9]   ; PTM1_CLK125 ; 3.852 ; 3.852 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[10]  ; PTM1_CLK125 ; 4.082 ; 4.082 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[11]  ; PTM1_CLK125 ; 4.176 ; 4.176 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[12]  ; PTM1_CLK125 ; 4.242 ; 4.242 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[13]  ; PTM1_CLK125 ; 4.162 ; 4.162 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[14]  ; PTM1_CLK125 ; 4.026 ; 4.026 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[15]  ; PTM1_CLK125 ; 4.111 ; 4.111 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[16]  ; PTM1_CLK125 ; 4.332 ; 4.332 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[17]  ; PTM1_CLK125 ; 4.314 ; 4.314 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[18]  ; PTM1_CLK125 ; 4.208 ; 4.208 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[19]  ; PTM1_CLK125 ; 4.451 ; 4.451 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[20]  ; PTM1_CLK125 ; 4.293 ; 4.293 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[21]  ; PTM1_CLK125 ; 4.357 ; 4.357 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[22]  ; PTM1_CLK125 ; 4.260 ; 4.260 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[23]  ; PTM1_CLK125 ; 4.440 ; 4.440 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[24]  ; PTM1_CLK125 ; 4.323 ; 4.323 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[25]  ; PTM1_CLK125 ; 4.311 ; 4.311 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[26]  ; PTM1_CLK125 ; 4.372 ; 4.372 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[27]  ; PTM1_CLK125 ; 4.483 ; 4.483 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[28]  ; PTM1_CLK125 ; 4.307 ; 4.307 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[29]  ; PTM1_CLK125 ; 4.650 ; 4.650 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[30]  ; PTM1_CLK125 ; 4.449 ; 4.449 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[31]  ; PTM1_CLK125 ; 4.514 ; 4.514 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[32]  ; PTM1_CLK125 ; 4.347 ; 4.347 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[33]  ; PTM1_CLK125 ; 4.609 ; 4.609 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[34]  ; PTM1_CLK125 ; 4.620 ; 4.620 ; Rise       ; PTM1_CLK125     ;
+;  CPU_PORTX_DAT[35]  ; PTM1_CLK125 ; 4.692 ; 4.692 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RFCLK     ; PTM1_CLK125 ; 4.955 ; 4.955 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RST       ; PTM1_CLK125 ; 5.148 ; 5.148 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TDAT[*]   ; PTM1_CLK125 ; 3.820 ; 3.820 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[0]  ; PTM1_CLK125 ; 5.072 ; 5.072 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[1]  ; PTM1_CLK125 ; 5.401 ; 5.401 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[2]  ; PTM1_CLK125 ; 5.451 ; 5.451 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[3]  ; PTM1_CLK125 ; 5.712 ; 5.712 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[4]  ; PTM1_CLK125 ; 5.651 ; 5.651 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[5]  ; PTM1_CLK125 ; 5.187 ; 5.187 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[6]  ; PTM1_CLK125 ; 5.455 ; 5.455 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[7]  ; PTM1_CLK125 ; 5.565 ; 5.565 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[8]  ; PTM1_CLK125 ; 5.631 ; 5.631 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[9]  ; PTM1_CLK125 ; 5.218 ; 5.218 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[10] ; PTM1_CLK125 ; 4.753 ; 4.753 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[11] ; PTM1_CLK125 ; 4.818 ; 4.818 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[12] ; PTM1_CLK125 ; 4.733 ; 4.733 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[13] ; PTM1_CLK125 ; 4.645 ; 4.645 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[14] ; PTM1_CLK125 ; 4.563 ; 4.563 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[15] ; PTM1_CLK125 ; 5.316 ; 5.316 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[16] ; PTM1_CLK125 ; 4.159 ; 4.159 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[17] ; PTM1_CLK125 ; 4.134 ; 4.134 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[18] ; PTM1_CLK125 ; 3.832 ; 3.832 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[19] ; PTM1_CLK125 ; 3.820 ; 3.820 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[20] ; PTM1_CLK125 ; 4.026 ; 4.026 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[21] ; PTM1_CLK125 ; 4.160 ; 4.160 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[22] ; PTM1_CLK125 ; 4.066 ; 4.066 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[23] ; PTM1_CLK125 ; 4.058 ; 4.058 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[24] ; PTM1_CLK125 ; 4.419 ; 4.419 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[25] ; PTM1_CLK125 ; 4.292 ; 4.292 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[26] ; PTM1_CLK125 ; 4.204 ; 4.204 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[27] ; PTM1_CLK125 ; 4.272 ; 4.272 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[28] ; PTM1_CLK125 ; 4.249 ; 4.249 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[29] ; PTM1_CLK125 ; 4.206 ; 4.206 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[30] ; PTM1_CLK125 ; 4.339 ; 4.339 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TDAT[31] ; PTM1_CLK125 ; 4.039 ; 4.039 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TENB[*]   ; PTM1_CLK125 ; 3.809 ; 3.809 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[0]  ; PTM1_CLK125 ; 5.001 ; 5.001 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[1]  ; PTM1_CLK125 ; 4.781 ; 4.781 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[2]  ; PTM1_CLK125 ; 3.809 ; 3.809 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TENB[3]  ; PTM1_CLK125 ; 4.610 ; 4.610 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TEOP[*]   ; PTM1_CLK125 ; 4.088 ; 4.088 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[0]  ; PTM1_CLK125 ; 5.341 ; 5.341 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[1]  ; PTM1_CLK125 ; 4.926 ; 4.926 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[2]  ; PTM1_CLK125 ; 4.088 ; 4.088 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TEOP[3]  ; PTM1_CLK125 ; 4.371 ; 4.371 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TERR[*]   ; PTM1_CLK125 ; 4.131 ; 4.131 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[0]  ; PTM1_CLK125 ; 5.025 ; 5.025 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[1]  ; PTM1_CLK125 ; 4.968 ; 4.968 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[2]  ; PTM1_CLK125 ; 4.131 ; 4.131 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TERR[3]  ; PTM1_CLK125 ; 4.354 ; 4.354 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TFCLK     ; PTM1_CLK125 ; 2.639 ; 2.639 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_TSOP[*]   ; PTM1_CLK125 ; 4.146 ; 4.146 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[0]  ; PTM1_CLK125 ; 5.604 ; 5.604 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[1]  ; PTM1_CLK125 ; 5.208 ; 5.208 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[2]  ; PTM1_CLK125 ; 4.146 ; 4.146 ; Rise       ; PTM1_CLK125     ;
+;  PTM1_MAC1_TSOP[3]  ; PTM1_CLK125 ; 4.218 ; 4.218 ; Rise       ; PTM1_CLK125     ;
+; PTM1_MAC1_RFCLK     ; PTM1_CLK125 ; 4.955 ; 4.955 ; Fall       ; PTM1_CLK125     ;
+; PTM1_MAC1_TFCLK     ; PTM1_CLK125 ; 2.639 ; 2.639 ; Fall       ; PTM1_CLK125     ;
++---------------------+-------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------+
+; Progagation Delay                                      ;
++------------+---------------+--------+----+----+--------+
+; Input Port ; Output Port   ; RR     ; RF ; FR ; FF     ;
++------------+---------------+--------+----+----+--------+
+; HRESET     ; PTM1_MAC1_RST ; 14.336 ;    ;    ; 14.336 ;
+; SRESET     ; PTM1_MAC1_RST ; 14.315 ;    ;    ; 14.315 ;
++------------+---------------+--------+----+----+--------+
+
+
++------------------------------------------------------+
+; Minimum Progagation Delay                            ;
++------------+---------------+-------+----+----+-------+
+; Input Port ; Output Port   ; RR    ; RF ; FR ; FF    ;
++------------+---------------+-------+----+----+-------+
+; HRESET     ; PTM1_MAC1_RST ; 6.659 ;    ;    ; 6.659 ;
+; SRESET     ; PTM1_MAC1_RST ; 6.649 ;    ;    ; 6.649 ;
++------------+---------------+-------+----+----+-------+
+
+
++-----------------------------------------------------------------------+
+; Setup Transfers                                                       ;
++-------------+-------------+----------+----------+----------+----------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+-------------+----------+----------+----------+----------+
+; PTM1_CLK125 ; PTM1_CLK125 ; 143462   ; 0        ; 0        ; 0        ;
++-------------+-------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Hold Transfers                                                        ;
++-------------+-------------+----------+----------+----------+----------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+-------------+----------+----------+----------+----------+
+; PTM1_CLK125 ; PTM1_CLK125 ; 143462   ; 0        ; 0        ; 0        ;
++-------------+-------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Recovery Transfers                                                    ;
++-------------+-------------+----------+----------+----------+----------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+-------------+----------+----------+----------+----------+
+; PTM1_CLK125 ; PTM1_CLK125 ; 2173     ; 0        ; 0        ; 0        ;
++-------------+-------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Removal Transfers                                                     ;
++-------------+-------------+----------+----------+----------+----------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+-------------+----------+----------+----------+----------+
+; PTM1_CLK125 ; PTM1_CLK125 ; 2173     ; 0        ; 0        ; 0        ;
++-------------+-------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++-------------------------------------------------+
+; Unconstrained Paths                             ;
++---------------------------------+-------+-------+
+; Property                        ; Setup ; Hold  ;
++---------------------------------+-------+-------+
+; Illegal Clocks                  ; 0     ; 0     ;
+; Unconstrained Clocks            ; 0     ; 0     ;
+; Unconstrained Input Ports       ; 114   ; 114   ;
+; Unconstrained Input Port Paths  ; 26618 ; 26618 ;
+; Unconstrained Output Ports      ; 87    ; 87    ;
+; Unconstrained Output Port Paths ; 125   ; 125   ;
++---------------------------------+-------+-------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+    Info: Processing started: Thu Aug 07 21:51:00 2014
+Info: Command: quartus_sta fpganic -c fpganic
+Info: qsta_default_script.tcl version: #1
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Critical Warning: Synopsys Design Constraints File file not found: 'fpganic.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name PTM1_CLK125 PTM1_CLK125
+Info: Analyzing Slow Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -6.137
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -6.137    -35595.803 PTM1_CLK125 
+Info: Worst-case hold slack is 0.457
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.457         0.000 PTM1_CLK125 
+Info: Worst-case recovery slack is -4.152
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -4.152     -9022.296 PTM1_CLK125 
+Info: Worst-case removal slack is 4.831
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     4.831         0.000 PTM1_CLK125 
+Info: Worst-case minimum pulse width slack is -1.500
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.500    -16140.040 PTM1_CLK125 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info: Started post-fitting delay annotation
+Warning: Found 96 output pins without output pin load capacitance assignment
+    Info: Pin "CPU_PORTX_DAT[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[16]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[17]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[18]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[19]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[20]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[21]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[22]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[23]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[24]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[25]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[26]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[27]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[28]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[29]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[30]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[31]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[32]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[33]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[34]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_DAT[35]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "CPU_PORTX_INT3" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_RFCLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "MAC1_PTM1_RENB[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "MAC1_PTM1_RENB[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "MAC1_PTM1_RENB[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "MAC1_PTM1_RENB[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TFCLK" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[4]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[5]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[7]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[8]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[9]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[10]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[11]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[12]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[13]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[14]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[15]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[16]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[17]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[18]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[19]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[20]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[21]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[22]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[23]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[24]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[25]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[26]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[27]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[28]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[29]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[30]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TDAT[31]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TENB[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TENB[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TENB[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TENB[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TERR[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TERR[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TERR[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TERR[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TPRTY[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TPRTY[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TPRTY[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TPRTY[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TSOP[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TSOP[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TSOP[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TSOP[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TEOP[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TEOP[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TEOP[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_TEOP[3]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "PTM1_MAC1_RST" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info: Delay annotation completed successfully
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -1.901
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.901     -7372.635 PTM1_CLK125 
+Info: Worst-case hold slack is 0.216
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.216         0.000 PTM1_CLK125 
+Info: Worst-case recovery slack is -1.371
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.371     -2979.183 PTM1_CLK125 
+Info: Worst-case removal slack is 2.249
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     2.249         0.000 PTM1_CLK125 
+Info: Worst-case minimum pulse width slack is -1.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.000     -8917.944 PTM1_CLK125 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 375 megabytes
+    Info: Processing ended: Thu Aug 07 21:51:06 2014
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:08
+
+

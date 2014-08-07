@@ -1,0 +1,17 @@
+Fitter Status : Successful - Thu Aug 07 21:50:56 2014
+Quartus II Version : 11.0 Build 208 07/03/2011 SP 1 SJ Full Version
+Revision Name : fpganic
+Top-level Entity Name : fpganic
+Family : Stratix II
+Device : EP2S60F1020C5
+Timing Models : Final
+Logic utilization : 11 %
+    Combinational ALUTs : 2,407 / 48,352 ( 5 % )
+    Dedicated logic registers : 3,351 / 48,352 ( 7 % )
+Total registers : 3351
+Total pins : 190 / 719 ( 26 % )
+Total virtual pins : 0
+Total block memory bits : 436,320 / 2,544,192 ( 17 % )
+DSP block 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 0 / 12 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

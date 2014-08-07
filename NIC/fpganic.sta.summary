@@ -1,0 +1,45 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'PTM1_CLK125'
+Slack : -6.137
+TNS   : -35595.803
+
+Type  : Slow Model Hold 'PTM1_CLK125'
+Slack : 0.457
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'PTM1_CLK125'
+Slack : -4.152
+TNS   : -9022.296
+
+Type  : Slow Model Removal 'PTM1_CLK125'
+Slack : 4.831
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'PTM1_CLK125'
+Slack : -1.500
+TNS   : -16140.040
+
+Type  : Fast Model Setup 'PTM1_CLK125'
+Slack : -1.901
+TNS   : -7372.635
+
+Type  : Fast Model Hold 'PTM1_CLK125'
+Slack : 0.216
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'PTM1_CLK125'
+Slack : -1.371
+TNS   : -2979.183
+
+Type  : Fast Model Removal 'PTM1_CLK125'
+Slack : 2.249
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'PTM1_CLK125'
+Slack : -1.000
+TNS   : -8917.944
+
+------------------------------------------------------------

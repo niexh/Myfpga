@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="fpganic">
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|pkt_converge:pktconverge_ge|bigfifo_converge:\fullpktfifo:1:big_fifo|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_af91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|pkt_converge:pktconverge_ge|fullpktflagfifo:\fullpktfifo:0:fullpktflagfifo_m|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_0261.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|spi3_tx:\getx_interface:2:spi3tx_model|bigfifo_spi3tx:big_fifo|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_6f91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|tx_bigfifo:\getx_interface:0:tx_bigfifo_model|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ba91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|pkt_converge:pktconverge_ge|bigfifo_converge:\fullpktfifo:2:big_fifo|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_af91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|pkt_converge:pktconverge_ge|fullpktflagfifo:\fullpktfifo:1:fullpktflagfifo_m|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_0261.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|spi3_tx:\getx_interface:3:spi3tx_model|bigfifo_spi3tx:big_fifo|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_6f91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|tx_bigfifo:\getx_interface:1:tx_bigfifo_model|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ba91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|pkt_converge:pktconverge_ge|bigfifo_converge:\fullpktfifo:3:big_fifo|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_af91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|pkt_converge:pktconverge_ge|fullpktflagfifo:\fullpktfifo:2:fullpktflagfifo_m|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_0261.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|pktrx_fifo:pktrx_fifo_model|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ba91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|pkttx_fifo:pkttx_fifo_model|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ba91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|rx_bigfifo:\getx_interface:2:rx_bigfifo_model|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ba91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|spi3_tx:\getx_interface:0:spi3tx_model|bigfifo_spi3tx:big_fifo|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_6f91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|tx_bigfifo:\getx_interface:2:tx_bigfifo_model|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ba91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|pkt_converge:pktconverge_ge|bigfifo_converge:\fullpktfifo:0:big_fifo|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_af91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|pkt_converge:pktconverge_ge|fullpktflagfifo:\fullpktfifo:3:fullpktflagfifo_m|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_0261.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|rx_bigfifo:\getx_interface:3:rx_bigfifo_model|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ba91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|spi3_tx:\getx_interface:1:spi3tx_model|bigfifo_spi3tx:big_fifo|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_6f91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|tx_bigfifo:\getx_interface:3:tx_bigfifo_model|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ba91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|rx_bigfifo:\getx_interface:0:rx_bigfifo_model|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ba91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|fpganic|rx_bigfifo:\getx_interface:1:rx_bigfifo_model|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ba91.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
